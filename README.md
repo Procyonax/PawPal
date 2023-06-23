@@ -1,4 +1,7 @@
 # PawPal
+
+![repository-open-graph-template(1)](https://github.com/Procyonax/PawPal/assets/116082593/2f8e71a2-c83e-4323-94e4-a41019e31fca)
+
 ## Brief
 
 A Java application built on a Spring framework with a PostgreSQL database and a Javascript/React frontend which will allow the user to find a suitable dog breed for adoption based on criteria that is tailored to the users lifestyle/environment. 
