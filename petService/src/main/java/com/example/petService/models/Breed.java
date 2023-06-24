@@ -54,7 +54,7 @@ private int independence;
 @Column(name="image")
 private String image;
 
-@Column(name="description")
+@Column(name="description", length = 1000)
 private String description;
 
 @Id
