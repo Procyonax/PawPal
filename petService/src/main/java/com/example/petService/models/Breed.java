@@ -51,6 +51,9 @@ private int childFriendly;
 @Column(name="independence")
 private int independence;
 
+@Column(name="image")
+private String image;
+
 @Column(name="description")
 private String description;
 
@@ -73,6 +76,7 @@ private Long id;
         int friendlinessToOtherDogs,
         int childFriendly,
         int independence,
+        String image,
         String description){
 
         this.name=name;
@@ -89,6 +93,7 @@ private Long id;
         this.friendlinessToOtherDogs=friendlinessToOtherDogs;
         this.childFriendly=childFriendly;
         this.independence=independence;
+        this.image=image;
         this.description=description;
         }
 
@@ -206,6 +211,14 @@ private Long id;
 
         public void setIndependence(int independence) {
                 this.independence = independence;
+        }
+
+        public String getImage() {
+                return image;
+        }
+
+        public void setImage(String image) {
+                this.image = image;
         }
 
         public String getDescription() {
