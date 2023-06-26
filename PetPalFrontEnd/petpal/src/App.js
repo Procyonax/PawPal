@@ -4,7 +4,7 @@ import PawPalContainer from "./containers/PawPalContainer";
 function App() {
   return (
     <div className="App">
-      <PawPalContainer/>
+      <PawPalContainer />
     </div>
   );
 }

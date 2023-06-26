@@ -2,15 +2,16 @@
   text-align: center;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-family: Belanosima;
 }
 
 .splash-header {
   height: 60vw;
   background: linear-gradient(transparent 90%, #ffa949),
-  linear-gradient(0deg, #fff, transparent),
-  #ffa949 url('./images/happy_dog_running.jpeg') no-repeat center;
+    linear-gradient(0deg, #fff, transparent),
+    #ffa949 url("./images/happy_dog_running.jpeg") no-repeat center;
   background-size: cover;
 }
 
