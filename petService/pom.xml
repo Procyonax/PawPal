@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example.codeclan</groupId>
-	<artifactId>pirateservice</artifactId>
+	<artifactId>petservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>petService</name>
-	<description>Demo project for Spring Boot</description>
+	<description>PawPal project by Scott, Beth, Tom and Gregor</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
