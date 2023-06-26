@@ -26,13 +26,18 @@ const PawPalContainer = () => {
     independence: ""
   });
 
-  useEffect(() => {
-    getBreedData()
-  }, []);
+  const [breedState, setBreedState] = useState([]);
 
-  const getBreedData= () => {
-    return breedData;
-  }
+  useEffect(()=>{
+    getBreedState()
+  }, [])
+
+const getBreedState = function(){
+  let breeds =[];
+  fetch("/api/breeds")
+  .then(res => res.json())
+  .then(breeds => console.log(breeds))
+}
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -64,4 +69,4 @@ const PawPalContainer = () => {
 )}
           
           
-          export default PawPalContainer;
+export default PawPalContainer;
