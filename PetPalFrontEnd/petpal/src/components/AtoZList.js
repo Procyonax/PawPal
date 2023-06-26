@@ -1,6 +1,5 @@
 const AtoZList = () => {
+  return "I am an AtoZlist component";
+};
 
-    return ( "I am an AtoZlist component" );
-}
- 
 export default AtoZList;

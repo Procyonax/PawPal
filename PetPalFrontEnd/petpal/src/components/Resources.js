@@ -1,6 +1,5 @@
 const Resources = () => {
+  return "I am a resources component";
+};
 
-    return ( "I am a resources component" );
-}
- 
 export default Resources;
