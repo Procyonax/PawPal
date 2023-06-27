@@ -1,24 +1,15 @@
-const Survey = ({ handleChange, handleSubmit, breedData }) => {
+const Survey = ({ handleChange, handleSubmit, formData }) => {
   return (
     <>
       <div>
         <h1>Breed Form</h1>
         <form onSubmit={handleSubmit}>
           <label>
-            Breed Name:
-            <input
-              type="text"
-              name="name"
-              value={breedData.name}
-              onChange={handleChange}
-            />
-          </label>
-          <label>
             Trainability:
             <input
               type="number"
               name="trainability"
-              value={breedData.trainability}
+              value={formData.trainability}
               onChange={handleChange}
               min={0}
               max={5}
@@ -30,7 +21,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
             <input
               type="number"
               name="health_issues"
-              value={breedData.health_issues}
+              value={formData.health_issues}
               onChange={handleChange}
               min={0}
               max={5}
@@ -42,7 +33,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
             <input
               type="number"
               name="exercise_needed"
-              value={breedData.exercise_needed}
+              value={formData.exercise_needed}
               onChange={handleChange}
               min={0}
               max={5}
@@ -51,7 +42,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
           <br />
           <label>
             Size:
-            <select name="size" value={breedData.size} onChange={handleChange}>
+            <select name="size" value={formData.size} onChange={handleChange}>
               <option value="">Select size</option>
               <option value="Small">Small</option>
               <option value="Medium">Medium</option>
@@ -65,7 +56,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
             <input
               type="number"
               name="drooling"
-              value={breedData.drooling}
+              value={formData.drooling}
               onChange={handleChange}
               min={0}
               max={5}
@@ -77,7 +68,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
             <input
               type="number"
               name="grooming"
-              value={breedData.grooming}
+              value={formData.grooming}
               onChange={handleChange}
               min={0}
               max={5}
@@ -89,7 +80,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
             <input
               type="number"
               name="hypoallergenic"
-              value={breedData.hypoallergenic}
+              value={formData.hypoallergenic}
               onChange={handleChange}
               min={0}
               max={5}
@@ -101,7 +92,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
             <input
               type="number"
               name="barking"
-              value={breedData.barking}
+              value={formData.barking}
               onChange={handleChange}
               min={0}
               max={5}
@@ -113,7 +104,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
             <input
               type="number"
               name="protective_rating"
-              value={breedData.protective_rating}
+              value={formData.protective_rating}
               onChange={handleChange}
               min={0}
               max={5}
@@ -125,7 +116,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
             <input
               type="number"
               name="sociability"
-              value={breedData.sociability}
+              value={formData.sociability}
               onChange={handleChange}
               min={0}
               max={5}
@@ -137,7 +128,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
             <input
               type="number"
               name="friendliness_to_other_dogs"
-              value={breedData.friendliness_to_other_dogs}
+              value={formData.friendliness_to_other_dogs}
               onChange={handleChange}
               min={0}
               max={5}
@@ -149,7 +140,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
             <input
               type="number"
               name="child_friendly"
-              value={breedData.child_friendly}
+              value={formData.child_friendly}
               onChange={handleChange}
               min={0}
               max={5}
@@ -162,7 +153,7 @@ const Survey = ({ handleChange, handleSubmit, breedData }) => {
             <input
               type="number"
               name="independence"
-              value={breedData.independence}
+              value={formData.independence}
               onChange={handleChange}
               min={0}
               max={5}

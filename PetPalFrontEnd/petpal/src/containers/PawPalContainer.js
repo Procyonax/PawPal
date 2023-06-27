@@ -8,7 +8,7 @@ import DetailBreed from "../components/DetailBreed";
 import Splash from "../components/Splash";
 
 const PawPalContainer = () => {
-  const [breedData, setBreedData] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     trainability: "",
     health_issues: "",
@@ -35,12 +35,12 @@ const PawPalContainer = () => {
     let breeds = [];
     fetch("/api/breeds")
       .then((res) => res.json())
-      .then((breeds) => console.log(breeds));
+      .then((breeds) => setBreedState(breeds))
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setBreedData((prevData) => ({
+    setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
@@ -48,7 +48,7 @@ const PawPalContainer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(breedData); // Perform desired actions with the form data
+    console.log(formData); // Perform desired actions with the form data
   };
 
   function matchBreed(formData, breedDatabase) {
@@ -59,57 +59,62 @@ const PawPalContainer = () => {
       let score = 0;
 
       // Compare each characteristic and increment the score for each match
-      if (formData.trainability === breed.trainability) {
+      if (formData.trainability == breed.trainability) {
         score++;
       }
-      if (formData.health_issues === breed.health_issues) {
+      if (formData.health_issues == breed.health_issues) {
         score++;
       }
-      if (formData.exercise_needed === breed.exercise_needed) {
+      if (formData.exercise_needed == breed.exercise_needed) {
         score++;
       }
       if (formData.size === breed.size) {
         score++;
       }
-      if (formData.drooling === breed.drooling) {
+      if (formData.drooling == breed.drooling) {
         score++;
       }
-      if (formData.grooming === breed.grooming) {
+      if (formData.grooming == breed.grooming) {
         score++;
       }
-      if (formData.hypoallergenic === breed.hypoallergenic) {
+      if (formData.hypoallergenic == breed.hypoallergenic) {
         score++;
       }
-      if (formData.barking === breed.barking) {
+      if (formData.barking == breed.barking) {
         score++;
       }
-      if (formData.protective_rating === breed.protective_rating) {
+      if (formData.protective_rating == breed.protective_rating) {
         score++;
       }
-      if (formData.sociability === breed.sociability) {
+      if (formData.sociability == breed.sociability) {
         score++;
       }
       if (
-        formData.friendliness_to_other_dogs === breed.friendliness_to_other_dogs
+        formData.friendliness_to_other_dogs == breed.friendliness_to_other_dogs
       ) {
         score++;
       }
-      if (formData.child_friendly === breed.child_friendly) {
+      if (formData.child_friendly == breed.child_friendly) {
         score++;
       }
-      if (formData.independence === breed.independence) {
+      if (formData.independence == breed.independence) {
         score++;
       }
 
       // Update the best match if the current breed has a higher score
       if (score > highestScore) {
         highestScore = score;
+        console.log(breed);
         bestMatch = breed;
       }
     }
-
+    console.log(bestMatch);
     return bestMatch;
+    // console.log(bestMatch)
   }
+
+  matchBreed(formData, breedState)
+  
 
   return (
     <>
@@ -124,7 +129,7 @@ const PawPalContainer = () => {
                 <Survey
                   handleChange={handleChange}
                   handleSubmit={handleSubmit}
-                  breedData={breedData}
+                  formData={formData}
                 />
               }
             />
