@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Survey from "../components/Survey";
 import Resources from "../components/Resources";
 import AtoZList from "../components/AtoZList";
@@ -7,6 +7,7 @@ import NavBar from "../components/NavBar";
 import DetailBreed from "../components/DetailBreed";
 import Splash from "../components/Splash";
 import Result from "../components/Result";
+
 
 const PawPalContainer = () => {
   const [formData, setFormData] = useState({
@@ -27,6 +28,7 @@ const PawPalContainer = () => {
   });
 
   const [breedState, setBreedState] = useState([]);
+  // const navigate = useNavigate()
 
   useEffect(() => {
     getBreedState();
@@ -47,9 +49,12 @@ const PawPalContainer = () => {
     }));
   };
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     console.log(formData); // Perform desired actions with the form data
+    window.location.assign("/result")
   };
 
   function matchBreed(formData, breedDatabase) {
