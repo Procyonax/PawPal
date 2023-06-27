@@ -174,7 +174,10 @@ const PawPalContainer = () => {
                 />
               }
             />
-            {/* <Route path="/result" element={<Result bestMatch={bestMatch} nearestMatches={nearestMatches}/>}/> */}
+            <Route
+              path="/result"
+              element={<Result matchBreed={matchBreed} />}
+            />
             <Route path="/resources" element={<Resources />} />
             <Route path="/atozlist" element={<AtoZList />} />
             <Route path="/detailbreed" element={<DetailBreed />} />
