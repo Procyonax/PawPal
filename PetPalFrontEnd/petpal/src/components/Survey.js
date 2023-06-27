@@ -20,8 +20,8 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             Health Issues:
             <input
               type="number"
-              name="health_issues"
-              value={formData.health_issues}
+              name="healthIssues"
+              value={formData.healthIssues}
               onChange={handleChange}
               min={0}
               max={5}
@@ -32,8 +32,8 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             Exercise Needed:
             <input
               type="number"
-              name="exercise_needed"
-              value={formData.exercise_needed}
+              name="exerciseNeeded"
+              value={formData.exerciseNeeded}
               onChange={handleChange}
               min={0}
               max={5}
@@ -103,8 +103,8 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             Protective Rating:
             <input
               type="number"
-              name="protective_rating"
-              value={formData.protective_rating}
+              name="protectiveRating"
+              value={formData.protectiveRating}
               onChange={handleChange}
               min={0}
               max={5}
@@ -127,8 +127,8 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             Friendliness to Other Dogs:
             <input
               type="number"
-              name="friendliness_to_other_dogs"
-              value={formData.friendliness_to_other_dogs}
+              name="friendlinessToOtherDogs"
+              value={formData.friendlinessToOtherDogs}
               onChange={handleChange}
               min={0}
               max={5}
@@ -139,8 +139,8 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             Child Friendly:
             <input
               type="number"
-              name="child_friendly"
-              value={formData.child_friendly}
+              name="childFriendly"
+              value={formData.childFriendly}
               onChange={handleChange}
               min={0}
               max={5}
