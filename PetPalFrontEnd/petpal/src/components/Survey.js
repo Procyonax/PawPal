@@ -1,4 +1,13 @@
+import {Link} from "react-router-dom";
+
 const Survey = ({ handleChange, handleSubmit, formData }) => {
+
+  const handlePost = () => {
+    handleSubmit()
+    // return <Link to="/result"></Link>
+  }
+
+  
   return (
     <>
       <div>
@@ -160,7 +169,7 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
-          <button type="submit">Submit</button>
+          <Link to="/result"><button onClick={handlePost}>Submit</button></Link>
         </form>
       </div>
     </>

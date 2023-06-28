@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useNavigate, Navigate, redirect, useHistory } from "react-router-dom";
 import Survey from "../components/Survey";
 import Resources from "../components/Resources";
 import AtoZList from "../components/AtoZList";
@@ -9,7 +9,7 @@ import Splash from "../components/Splash";
 import Result from "../components/Result";
 
 
-const PawPalContainer = () => {
+const PawPalContainer = ({}) => {
   const [formData, setFormData] = useState({
     name: "",
     trainability: "",
@@ -27,12 +27,20 @@ const PawPalContainer = () => {
     independence: "",
   });
 
+  const [nearestMatches, setNearestMatches] = useState([]);
   const [breedState, setBreedState] = useState([]);
-  // const navigate = useNavigate()
-
+  const [reversedArray, setReversedArray] = useState([])
+  
   useEffect(() => {
     getBreedState();
   }, []);
+
+  useEffect(() => {
+    if (nearestMatches.length > 0){
+      getReverseArray()
+    }
+  }, [nearestMatches])
+
 
   const getBreedState = function () {
     let breeds = [];
@@ -41,26 +49,65 @@ const PawPalContainer = () => {
       .then((breeds) => setBreedState(breeds));
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+  const updateState = (matches) => {
+    console.log("update state called");
+    console.log("matches", matches);
+    setNearestMatches(matches)
+    
+  }
+
+  function getReverseArray(){
+    reverseArray(nearestMatches);
+
   };
+
+  // function to reverse the array of matchBreed
+
+  function reverseArray(dogArray) {
+    let arraysort= []
+    arraysort = dogArray.reverse();
+    setReversedArray(arraysort) 
+  }
 
   
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    console.log(formData); // Perform desired actions with the form data
-    window.location.assign("/result")
-  };
 
+  
+
+
+  const handleChange = (e) => {
+    let key = e.target.name;
+    let data = e.target.value;
+    let newFormData = {...formData}
+    newFormData[key] = data;
+    setFormData(newFormData);
+   // const { name, value } = e.target;
+    // setFormData((prevData) => ({
+    //   ...prevData,
+    //   [name]: value,
+    // }));
+  };
+  
+  
+  const handleSubmit = (e) => {
+    // e.preventDefault();
+    getMatch();
+    // console.log("nearest matches in handle submit:"+reversedArray)
+    // window.location.assign("/result");
+    // window.location.replace = "/result";
+  };
+  
+  function getMatch (){
+    matchBreed(formData, breedState);
+  };
+  
+
+  
   function matchBreed(formData, breedDatabase) {
+    console.log("formData", formData);
+    console.log("breedDB", breedDatabase);
+    let closestMatches = [];
     let bestMatch = null;
     let highestScore = 0;
-    const nearestMatches = [];
     // nearestMatches.length = 0;
 
     for (const breed of breedDatabase) {
@@ -152,15 +199,16 @@ const PawPalContainer = () => {
       if (score > highestScore) {
         highestScore = score;
         bestMatch = breed;
-        nearestMatches.push(breed);
+        closestMatches.push(breed);
       }
     }
-    console.log(bestMatch);
-    console.log(nearestMatches);
-    return bestMatch, nearestMatches;
+    console.log("nearest match in matchbreed" + closestMatches);
+    updateState(closestMatches)
   }
+  // console.log("nearest matches after set state" + nearestMatches)
 
-  matchBreed(formData, breedState);
+  // matchBreed(formData, breedState);
+
 
   return (
     <>
@@ -181,7 +229,7 @@ const PawPalContainer = () => {
             />
             <Route
               path="/result"
-              element={<Result matchBreed={matchBreed} />}
+              element={<Result reversedArray={reversedArray}/>}
             />
             <Route path="/resources" element={<Resources />} />
             <Route path="/atozlist" element={<AtoZList />} />
@@ -191,6 +239,6 @@ const PawPalContainer = () => {
       </div>
     </>
   );
-};
+            };
 
 export default PawPalContainer;
