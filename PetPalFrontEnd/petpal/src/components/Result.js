@@ -1,8 +1,11 @@
 import PawPalContainer from "../containers/PawPalContainer";
 import ResultCard from "../components/ResultCard";
 
-const Result = () => {
-  return <div></div>;
+const Result = ({reversedArray}) => {
+  return (
+
+    <p>Result</p>
+  );
 };
 
 export default Result;
