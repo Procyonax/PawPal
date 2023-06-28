@@ -1,9 +1,11 @@
-const ResultCard = ({ bestMatch }) => {
+const ResultCard = ({key, breed}) => {
+
+
   return (
     <div>
       {/* <img src="../public/Images/"{bestMatch.image} alt="{}"/> */}
-      <h2>{bestMatch.name}</h2>
-      <p>{bestMatch.description}</p>
+      <h2>{breed.name}</h2>
+      <p>{breed.description}</p>
     </div>
   );
 };
