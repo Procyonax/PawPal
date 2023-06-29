@@ -15,6 +15,7 @@ import NavBar from "../components/NavBar";
 import DetailBreed from "../components/DetailBreed";
 import Splash from "../components/Splash";
 import Result from "../components/Result";
+import DogFact from "../components/DogFact";
 
 const PawPalContainer = ({}) => {
   const [formData, setFormData] = useState({
@@ -37,9 +38,11 @@ const PawPalContainer = ({}) => {
   const [nearestMatches, setNearestMatches] = useState([]);
   const [breedState, setBreedState] = useState([]);
   const [reversedArray, setReversedArray] = useState([]);
+  const [dogFactsState, setDogFactsState] = useState([]);
 
   useEffect(() => {
     getBreedState();
+    getDogFactsState();
   }, []);
 
   useEffect(() => {
@@ -54,6 +57,14 @@ const PawPalContainer = ({}) => {
       .then((res) => res.json())
       .then((breeds) => setBreedState(breeds));
   };
+
+  const  getDogFactsState = function () {
+    let pawfacts = [];
+    fetch("/api/dogfacts")
+      .then((res) => res.json())
+      .then((pawfacts) => setDogFactsState(pawfacts))
+
+  }
 
   const updateState = (matches) => {
     console.log("update state called");
@@ -232,7 +243,9 @@ const PawPalContainer = ({}) => {
               element={<AtoZList breeds={breedState} />}
             />
             <Route path="/detailbreed" element={<DetailBreed />} />
+            
           </Routes>
+          {dogFactsState.length > 0 ? <DogFact pawfacts={dogFactsState} /> : null}
         </Router>
       </div>
     </>
