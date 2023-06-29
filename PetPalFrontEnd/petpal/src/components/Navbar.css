@@ -61,6 +61,7 @@
   list-style: none;
   text-align: right;
   justify-content: flex-end;
+  font-family: Belanosima;
 }
 
 .nav-item {
@@ -118,7 +119,6 @@
     opacity: 1;
     transition: all 0.6s ease;
     z-index: 1;
-
   }
 
   .nav-links {
