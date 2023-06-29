@@ -95,7 +95,7 @@ public class DataLoader implements ApplicationRunner {
                 "Rhodesian Ridgebacks are large and athletic dogs originally bred in Southern Africa. They are known for the ridge of hair along their back that grows in the opposite direction. Rhodesian Ridgebacks are loyal, protective, and make excellent guard dogs.");
         breedRepository.save(rhodesianRidgeback);
 
-        Breed caneCorse = new Breed("Cane Corso",
+        Breed caneCorso = new Breed("Cane Corso",
                 4,
                 3,
                 4,
@@ -109,9 +109,9 @@ public class DataLoader implements ApplicationRunner {
                 3,
                 3,
                 4,
-                "cane_corse.jpg",
+                "cane_corso.jpg",
                 "Cane Corsos are powerful and muscular dogs originating from Italy. They have a strong guarding instinct and are known for their loyalty and protective nature. Cane Corsos require early socialization and consistent training.");
-        breedRepository.save(caneCorse);
+        breedRepository.save(caneCorso);
 
         Breed basenji = new Breed("Basenji",
                 3,
@@ -253,7 +253,7 @@ public class DataLoader implements ApplicationRunner {
                 5,
                 4,
                 2,
-                "basset_hounds.jpg",
+                "basset_hound.jpg",
                 "Basset Hounds are low-slung and long-eared dogs known for their excellent sense of smell and calm temperament. They are friendly, patient, and make great family pets. Basset Hounds may have a stubborn streak but respond well to positive reinforcement training.");
         breedRepository.save(bassetHound);
 
@@ -452,7 +452,7 @@ public class DataLoader implements ApplicationRunner {
                 3,
                 3,
                 3,
-                "default.jpg",
+                "briard.jpg",
                 "Briards are intelligent and protective dogs with a distinctive long and shaggy coat. They have a strong herding instinct and are known for their loyalty and devotion to their families. Briards require regular grooming to maintain their coat.");
         breedRepository.save(briard);
 
@@ -614,7 +614,7 @@ public class DataLoader implements ApplicationRunner {
                 3,
                 3,
                 4,
-                "belgian_alinois.jpg",
+                "belgian_malinois.jpg",
                 "Belgian Malinois is a highly intelligent and driven breed that excels in various tasks, including police and military work, search and rescue, and competitive dog sports. They are agile, loyal, and require a lot of mental and physical stimulation.");
         breedRepository.save(belgianMalinois);
 
@@ -938,7 +938,7 @@ public class DataLoader implements ApplicationRunner {
                 4,
                 4,
                 3,
-                "siberianHusky.jpg",
+                "siberian_husky.jpg",
                 "Siberian Huskies are active and energetic dogs that were originally bred for sled pulling in the Arctic. They have striking blue or multi-colored eyes and a thick double coat. Huskies are known for their friendly and outgoing nature.");
         breedRepository.save(siberianHusky);
 
@@ -1100,7 +1100,7 @@ public class DataLoader implements ApplicationRunner {
                 3,
                 3,
                 4,
-                "default.jpg",
+                "doberman_pinscher.jpg",
                 "Doberman Pinschers are powerful and intelligent dogs known for their loyalty and protective nature. They are often used as guard dogs and excel in various dog sports. Dobermans require firm training and socialization from an early age.");
         breedRepository.save(dobermanPinscher);
 
