@@ -22,7 +22,11 @@ const NavBar = () => {
             </Link>
             {/* Switches burger between bars when inactive and cross when active */}
             <div className="menu-icon" onClick={handleClick}>
-              {click ? <FaTimes style={{color: "#ff9200",}} /> : <FaBars style={{color: "#ff9200",}} />}
+              {click ? (
+                <FaTimes style={{ color: "#ff9200" }} />
+              ) : (
+                <FaBars style={{ color: "#ff9200" }} />
+              )}
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
@@ -70,7 +74,6 @@ const NavBar = () => {
                 </NavLink>
               </li>
             </ul>
-
           </div>
         </nav>
       </IconContext.Provider>

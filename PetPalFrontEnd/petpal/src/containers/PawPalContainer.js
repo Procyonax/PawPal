@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate, Navigate, redirect, useHistory } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+  Navigate,
+  redirect,
+  useHistory,
+} from "react-router-dom";
 import Survey from "../components/Survey";
 import Resources from "../components/Resources";
 import AtoZList from "../components/AtoZList";
@@ -7,7 +15,6 @@ import NavBar from "../components/NavBar";
 import DetailBreed from "../components/DetailBreed";
 import Splash from "../components/Splash";
 import Result from "../components/Result";
-
 
 const PawPalContainer = ({}) => {
   const [formData, setFormData] = useState({
@@ -29,18 +36,17 @@ const PawPalContainer = ({}) => {
 
   const [nearestMatches, setNearestMatches] = useState([]);
   const [breedState, setBreedState] = useState([]);
-  const [reversedArray, setReversedArray] = useState([])
-  
+  const [reversedArray, setReversedArray] = useState([]);
+
   useEffect(() => {
     getBreedState();
   }, []);
 
   useEffect(() => {
-    if (nearestMatches.length > 0){
-      getReverseArray()
+    if (nearestMatches.length > 0) {
+      getReverseArray();
     }
-  }, [nearestMatches])
-
+  }, [nearestMatches]);
 
   const getBreedState = function () {
     let breeds = [];
@@ -52,42 +58,34 @@ const PawPalContainer = ({}) => {
   const updateState = (matches) => {
     console.log("update state called");
     console.log("matches", matches);
-    setNearestMatches(matches)
-    
-  }
-
-  function getReverseArray(){
-    reverseArray(nearestMatches);
-
+    setNearestMatches(matches);
   };
+
+  function getReverseArray() {
+    reverseArray(nearestMatches);
+  }
 
   // function to reverse the array of matchBreed
 
   function reverseArray(dogArray) {
-    let arraysort= []
+    let arraysort = [];
     arraysort = dogArray.reverse();
-    setReversedArray(arraysort) 
+    setReversedArray(arraysort);
   }
-
-  
-
-  
-
 
   const handleChange = (e) => {
     let key = e.target.name;
     let data = e.target.value;
-    let newFormData = {...formData}
+    let newFormData = { ...formData };
     newFormData[key] = data;
     setFormData(newFormData);
-   // const { name, value } = e.target;
+    // const { name, value } = e.target;
     // setFormData((prevData) => ({
     //   ...prevData,
     //   [name]: value,
     // }));
   };
-  
-  
+
   const handleSubmit = (e) => {
     // e.preventDefault();
     getMatch();
@@ -95,13 +93,11 @@ const PawPalContainer = ({}) => {
     // window.location.assign("/result");
     // window.location.replace = "/result";
   };
-  
-  function getMatch (){
-    matchBreed(formData, breedState);
-  };
-  
 
-  
+  function getMatch() {
+    matchBreed(formData, breedState);
+  }
+
   function matchBreed(formData, breedDatabase) {
     console.log("formData", formData);
     console.log("breedDB", breedDatabase);
@@ -203,12 +199,11 @@ const PawPalContainer = ({}) => {
       }
     }
     console.log("nearest match in matchbreed" + closestMatches);
-    updateState(closestMatches)
+    updateState(closestMatches);
   }
   // console.log("nearest matches after set state" + nearestMatches)
 
   // matchBreed(formData, breedState);
-
 
   return (
     <>
@@ -229,16 +224,19 @@ const PawPalContainer = ({}) => {
             />
             <Route
               path="/result"
-              element={<Result reversedArray={reversedArray}/>}
+              element={<Result reversedArray={reversedArray} />}
             />
             <Route path="/resources" element={<Resources />} />
-            <Route path="/atozlist" element={<AtoZList breeds={breedState} />} />
+            <Route
+              path="/atozlist"
+              element={<AtoZList breeds={breedState} />}
+            />
             <Route path="/detailbreed" element={<DetailBreed />} />
           </Routes>
         </Router>
       </div>
     </>
   );
-            };
+};
 
 export default PawPalContainer;

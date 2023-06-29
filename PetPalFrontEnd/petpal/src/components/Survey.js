@@ -1,13 +1,11 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Survey = ({ handleChange, handleSubmit, formData }) => {
-
   const handlePost = () => {
-    handleSubmit()
+    handleSubmit();
     // return <Link to="/result"></Link>
-  }
+  };
 
-  
   return (
     <>
       <div>
@@ -169,7 +167,9 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
-          <Link to="/result"><button onClick={handlePost}>Submit</button></Link>
+          <Link to="/result">
+            <button onClick={handlePost}>Submit</button>
+          </Link>
         </form>
       </div>
     </>

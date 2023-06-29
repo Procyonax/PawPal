@@ -1,9 +1,7 @@
-const ResultCard = ({key, breed}) => {
-
-
+const ResultCard = ({ key, breed }) => {
   return (
     <div>
-      <img src={`../Images/${breed.image}`} alt="{}"/>
+      <img src={`../Images/${breed.image}`} alt="{}" />
       <h2>{breed.name}</h2>
       <p>{breed.description}</p>
     </div>
