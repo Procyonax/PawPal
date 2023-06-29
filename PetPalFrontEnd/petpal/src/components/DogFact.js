@@ -15,9 +15,9 @@ const getRandomFact =() =>{
 
 return (
 
-    <>
+    <div>
     <p>{randomFact}</p>
-    </>
+    </div>
 )
 
 }

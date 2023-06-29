@@ -1,9 +1,8 @@
-// Will have to use below if images not in public folder
-// import dogsTrustLogo from "../images/dogs_trust_logo.jpg";
+import React from 'react';
 
 const Resources = () => {
   return (
-    <>
+    <div>
       <h1>Pawsome Resources</h1>
       <div>
       <h2>Find your perfect pooch</h2>
@@ -86,7 +85,7 @@ const Resources = () => {
       Find a verified and reviewed sitter who`ll keep your pets company and give them all the time, care and attention in the world.
       </p>
       </div>
-    </>
+    </div>
   );
 };
 

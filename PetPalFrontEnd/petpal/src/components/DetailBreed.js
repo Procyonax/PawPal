@@ -1,6 +1,8 @@
+import React from 'react';
+
 const DetailBreed = () => {
   return (
-    <>
+    <div>
       {/* <image> */}
       {/* <h2>{breed.name}</h2>
     <p>{breed.trainability}</p>
@@ -17,7 +19,7 @@ const DetailBreed = () => {
     <p>{breed.child_friendly}</p>
     <p>{breed.independence}</p>
     <h3>{breed.description}</h3> */}
-    </>
+    </div>
   );
 };
 

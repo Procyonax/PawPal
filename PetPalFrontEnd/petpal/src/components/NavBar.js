@@ -11,7 +11,7 @@ const NavBar = () => {
   const closeMobileMenu = () => setClick(false);
 
   return (
-    <>
+    <div>
       {/* IconContext changes icons from default black to white, as background is black */}
       <IconContext.Provider value={{ color: "#EFD231" }}>
         <nav className="navbar">
@@ -77,7 +77,7 @@ const NavBar = () => {
           </div>
         </nav>
       </IconContext.Provider>
-    </>
+    </div>
   );
 };
 
