@@ -41,7 +41,7 @@ public class DataLoader implements ApplicationRunner {
         dogFactsRepository.save(fact4);
         DogFact fact5 = new DogFact("There are an estimated 400 million dogs in the world.");
         dogFactsRepository.save(fact5);
-        DogFact fact6 = new DogFact("There are an estimated 400 million dogs in the world.");
+        DogFact fact6 = new DogFact("Dogs do have better low-light vision than humans because of a special light-reflecting layer behind their retinas.");
         dogFactsRepository.save(fact6);
         DogFact fact7 = new DogFact("Weird dog laws include allowing police offers in Palding, Ohio, to bite a dog to quiet it. In Ventura County, California, cats and dogs are not allowed to have sex without a permit.");
         dogFactsRepository.save(fact7);
