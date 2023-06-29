@@ -1,7 +1,9 @@
 package com.example.petService.components;
 
 import com.example.petService.models.Breed;
+import com.example.petService.models.DogFact;
 import com.example.petService.repository.BreedRepository;
+import com.example.petService.repository.DogFactsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.boot.ApplicationArguments;
@@ -17,11 +19,119 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     BreedRepository breedRepository;
 
+    @Autowired
+    DogFactsRepository dogFactsRepository;
+
     public DataLoader() {
 
     }
 
     public void run(ApplicationArguments args) throws Exception {
+
+        DogFact fact1 = new DogFact("All dogs are identical in anatomy, with 321 bones and 42 permanent teeth.");
+        dogFactsRepository.save(fact1);
+
+
+        DogFact fact2 = new DogFact("All dogs can be traced back 40 million years ago to a weasel-like animal called the Miacis which dwelled in trees and dens. The Miacis later evolved into the Tomarctus, a direct forbear of the genus Canis, which includes the wolf and jackal as well as the dog.");
+        dogFactsRepository.save(fact2);
+
+        DogFact fact3 = new DogFact("Dogs like to chew bones but cooked bones and bones that can splinter such as cooked chicken bones should not be given to dogs.");
+        dogFactsRepository.save(fact3);
+        DogFact fact4 = new DogFact("A dog can both sniff and breathe at the same time.");
+        dogFactsRepository.save(fact4);
+        DogFact fact5 = new DogFact("There are an estimated 400 million dogs in the world.");
+        dogFactsRepository.save(fact5);
+        DogFact fact6 = new DogFact("There are an estimated 400 million dogs in the world.");
+        dogFactsRepository.save(fact6);
+        DogFact fact7 = new DogFact("Weird dog laws include allowing police offers in Palding, Ohio, to bite a dog to quiet it. In Ventura County, California, cats and dogs are not allowed to have sex without a permit.");
+        dogFactsRepository.save(fact7);
+        DogFact fact8 = new DogFact("A Beatles hit. It’s rumored that, at the end of the Beatles song, \"A Day in the Life,\" Paul McCartney recorded an ultrasonic whistle, audible only to dogs, just for his Shetland sheepdog.");
+        dogFactsRepository.save(fact8);
+        DogFact fact9 = new DogFact("Most experts believe humans domesticated dogs before donkeys, horses, sheep, goats, cattle, cats, or chickens.");
+        dogFactsRepository.save(fact9);
+        DogFact fact10 = new DogFact("In Iran, it is against the law to own a dog as a pet. However, if an owner can prove the dog is a guard or hunting dog, this restriction doesn’t apply. Muslim reticence concerning dogs is perhaps due to the fact that rabies has always been endemic in the Middle East.");
+        dogFactsRepository.save(fact10);
+        DogFact fact11 = new DogFact("Conservationists have used dogs to find bumblebee hives in order to protect endangered species.");
+        dogFactsRepository.save(fact11);
+        DogFact fact12 = new DogFact("Bloodhound dogs have a keen sense of smell and have been used since the Middle Ages to track criminals.");
+        dogFactsRepository.save(fact12);
+        DogFact fact13 = new DogFact("Dogs have been bred for a variety of purposes, including hunting, guarding, and companionship.");
+        dogFactsRepository.save(fact13);
+        DogFact fact14 = new DogFact("The longer a dog’s nose, the more effective it’s internal cooling system.");
+        dogFactsRepository.save(fact14);
+        DogFact fact15 = new DogFact("The Chihuahua was named after the state in Mexico where they were discovered.");
+        dogFactsRepository.save(fact15);
+        DogFact fact16 = new DogFact("Flyball, a dog sport consisting of relays, hurdles, and ball retrieving, was developed in the late 60s, and the first tournament was held in 1983.");
+        dogFactsRepository.save(fact16);
+        DogFact fact17 = new DogFact("President Franklin Roosevelt created a minor international incident when he claimed he sent a destroyer to the Aleutian Islands just to pick up his Scottish Terrier, Fala, who had been left behind.");
+        dogFactsRepository.save(fact17);
+        DogFact fact18 = new DogFact("Dogs can smell about 1,000 times better than humans. While humans have 5 million smell-detecting cells, dogs have more than 220 million. The part of the brain that interprets smell is also four times larger in dogs than in humans.");
+        dogFactsRepository.save(fact18);
+        DogFact fact19 = new DogFact("The ancient religion Zoroastrianism includes in its religious text titled the Zend Avesta a section devoted to the care and breeding of dogs.");
+        dogFactsRepository.save(fact19);
+        DogFact fact20 = new DogFact("There are nearly 14,000 animal shelters and rescue groups across North America.");
+        dogFactsRepository.save(fact20);
+        DogFact fact21 = new DogFact("Dogs are pack animals -- they don't enjoy being alone.");
+        dogFactsRepository.save(fact21);
+        DogFact fact22 = new DogFact("The normal body temperature of a dog is 100.94 degrees Fahrenheit (38.3 Celsius) to 102.56 F (39.2 C) whereas human normal body temperature 98.6 F (37 C).");
+        dogFactsRepository.save(fact22);
+        DogFact fact23 = new DogFact("The world's smallest dog was a Chihuahua named Miracle Milly, who weighed only 1.1 pounds.");
+        dogFactsRepository.save(fact23);
+        DogFact fact24 = new DogFact("The average dog can run at speeds of up to 19mph.");
+        dogFactsRepository.save(fact24);
+        DogFact fact25 = new DogFact("Seventy percent of people sign their pet’s name on greeting and holiday cards.");
+        dogFactsRepository.save(fact25);
+        DogFact fact26 = new DogFact("Humans have kept dogs as pets for over 12,000 years.");
+        dogFactsRepository.save(fact26);
+        DogFact fact27 = new DogFact("Service dogs are recognized in the U.S. as 'necessary medical equipment.'");
+        dogFactsRepository.save(fact27);
+        DogFact fact28 = new DogFact("In 2003, Dr. Roger Mugford invented the 'wagometer,' a device that claims to interpret a dog’s exact mood by measuring the wag of its tail.");
+        dogFactsRepository.save(fact28);
+        DogFact fact29 = new DogFact("A dog's nose is the equivalent of a human's fingerprints, as no two dogs have the same nose print.");
+        dogFactsRepository.save(fact29);
+        DogFact fact30 = new DogFact("The Girl Scouts and Boy Scouts both offer merit badges in dog care.");
+        dogFactsRepository.save(fact30);
+        DogFact fact31 = new DogFact("When dogs copulate, it is very normal for them to get stuck together and it may last for up to 45 minutes.");
+        dogFactsRepository.save(fact31);
+        DogFact fact32 = new DogFact("Fifty-eight percent of people put pets in family and holiday portraits.");
+        dogFactsRepository.save(fact32);
+        DogFact fact33 = new DogFact("Two Labradors, Lucky and Flo, were the first dogs known for sniffing out pirated DVDs.");
+        dogFactsRepository.save(fact33);
+        DogFact fact34 = new DogFact("Dogs like sweets a lot more than cats do. While cats have around only 473 taste buds, dogs have about 1,700 taste buds. Humans have approximately 9,000.");
+        dogFactsRepository.save(fact34);
+        DogFact fact35 = new DogFact("New puppies have heat sensors in their noses to help find their moms while their eyes and ears are closed.");
+        dogFactsRepository.save(fact35);
+        DogFact fact36 = new DogFact("The smallest known adult dog was a Yorkshire Terrier that was only 2.5 inches at the shoulder, and weighed only 4 ounces.");
+        dogFactsRepository.save(fact36);
+        DogFact fact37 = new DogFact("Some dogs have shown remarkable ability to detect certain cancers.");
+        dogFactsRepository.save(fact37);
+        DogFact fact38 = new DogFact("A dog’s pregnancy lasts for approximately 60 days.");
+        dogFactsRepository.save(fact38);
+        DogFact fact39 = new DogFact("Dogs can suffer from separation anxiety if they are left alone for long periods of time.");
+        dogFactsRepository.save(fact39);
+        DogFact fact40 = new DogFact("Puppies grow to half their body weight in the first four to five months!");
+        dogFactsRepository.save(fact40);
+        DogFact fact41 = new DogFact("Dogs who have been spayed or neutered live longer than intact dogs.");
+        dogFactsRepository.save(fact41);
+        DogFact fact42 = new DogFact("The border collie or sheep dog is often considered to be the most intelligent breed of dog some of them have been trained to recognize the words for up to 1,000 objects and retrieved them by verbal command.");
+        dogFactsRepository.save(fact42);
+        DogFact fact43 = new DogFact("When dogs have been doing a lot of exercise, they pant. It is not because they are out of breath like a human would be. Dogs have developed the method of losing heat by panting because sweating would not be very efficient due to all the fur.");
+        dogFactsRepository.save(fact43);
+        DogFact fact44 = new DogFact("The Labrador is so popular, in 2006 there were approximately 3-5 times more Labs as there were German Shepherds or Golden Retrievers.");
+        dogFactsRepository.save(fact44);
+        DogFact fact45 = new DogFact("The oldest dog on record was a Australian Cattle Dog named Bluey, who lived to be 29 years and 5 months old.");
+        dogFactsRepository.save(fact45);
+        DogFact fact46 = new DogFact("A dog's sense of smell is reduced by up to 40 percent when he's overheated and panting.");
+        dogFactsRepository.save(fact46);
+        DogFact fact47 = new DogFact("n ancient China, an emperor's last line of defense was a small Pekingese dog literally hidden up his sleeve.");
+        dogFactsRepository.save(fact47);
+        DogFact fact48 = new DogFact("An African wolf dog known as the Basenji is the only dog in the world that cannot bark.");
+        dogFactsRepository.save(fact48);
+        DogFact fact49 = new DogFact("Hollywood’s first and arguably best canine superstar was Rin Tin Tin, a five-day-old German Shepherd found wounded in battle in WWI France and adopted by an American soldier, Lee Duncan. He would sign his own contracts with his paw print.");
+        dogFactsRepository.save(fact49);
+        DogFact fact50 = new DogFact("The world's largest dog was a Great Dane named Zorba, who weighed 343 pounds.");
+        dogFactsRepository.save(fact50);
+
 
         Breed boxer = new Breed("Boxer",
                 3,
@@ -1121,6 +1231,7 @@ public class DataLoader implements ApplicationRunner {
                 "cavalier_king_charles_spaniel.jpg",
                 "Cavalier King Charles Spaniels are small and affectionate dogs with a friendly and gentle nature. They are well-suited for families and get along well with children and other pets. Cavaliers have a silky coat that requires regular grooming.");
         breedRepository.save(cavalierKingCharlesSpaniel);
+
 
     }
             }
