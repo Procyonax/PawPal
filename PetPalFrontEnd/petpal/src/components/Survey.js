@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 
 const Survey = ({ handleChange, handleSubmit, formData }) => {
@@ -7,7 +8,7 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
   };
 
   return (
-    <>
+    <div>
       <div>
         <h1>Breed Form</h1>
         <form onSubmit={handleSubmit}>
@@ -172,7 +173,7 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </Link>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

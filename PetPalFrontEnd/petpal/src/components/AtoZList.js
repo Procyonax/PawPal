@@ -34,7 +34,7 @@ const AtoZList = ({ breeds }) => {
     );
 
   return (
-    <>
+    <div>
       <h1>AtoZ of Dogs</h1>
       <input
         type="text"
@@ -53,7 +53,7 @@ const AtoZList = ({ breeds }) => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 

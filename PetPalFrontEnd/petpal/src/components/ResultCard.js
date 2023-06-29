@@ -1,3 +1,5 @@
+import React from 'react';
+
 const ResultCard = ({ key, breed }) => {
   return (
     <div>

@@ -217,7 +217,7 @@ const PawPalContainer = ({}) => {
   // matchBreed(formData, breedState);
 
   return (
-    <>
+    <div>
       <div>
         <Router>
           <NavBar />
@@ -248,7 +248,7 @@ const PawPalContainer = ({}) => {
           {dogFactsState.length > 0 ? <DogFact pawfacts={dogFactsState} /> : null}
         </Router>
       </div>
-    </>
+    </div>
   );
 };
 
