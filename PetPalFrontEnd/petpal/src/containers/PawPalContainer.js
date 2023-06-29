@@ -232,7 +232,7 @@ const PawPalContainer = ({}) => {
               element={<Result reversedArray={reversedArray}/>}
             />
             <Route path="/resources" element={<Resources />} />
-            <Route path="/atozlist" element={<AtoZList />} />
+            <Route path="/atozlist" element={<AtoZList breeds={breedState} />} />
             <Route path="/detailbreed" element={<DetailBreed />} />
           </Routes>
         </Router>
