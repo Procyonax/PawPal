@@ -16,6 +16,7 @@ import DetailBreed from "../components/DetailBreed";
 import Splash from "../components/Splash";
 import Result from "../components/Result";
 import DogFact from "../components/DogFact";
+import Footer from "../components/Footer";
 
 const PawPalContainer = ({}) => {
   const [formData, setFormData] = useState({
@@ -243,10 +244,11 @@ const PawPalContainer = ({}) => {
               element={<AtoZList breeds={breedState} />}
             />
             <Route path="/detailbreed" element={<DetailBreed />} />
-            
           </Routes>
-          {dogFactsState.length > 0 ? <DogFact pawfacts={dogFactsState} /> : null}
         </Router>
+        <div className="footer">
+        {dogFactsState.length > 0 ? <Footer pawfacts={dogFactsState} /> : null}
+        </div>
       </div>
     </div>
   );
