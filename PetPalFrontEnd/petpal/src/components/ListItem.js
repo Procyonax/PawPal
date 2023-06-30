@@ -7,6 +7,7 @@ const ListItem = ({ breed }) => {
         src={require("../images/" + breed.image)}
         style={{ width: "250px" }}
       />
+    
       <h2>{breed.name}</h2>
     </>
   );

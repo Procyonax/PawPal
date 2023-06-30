@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,6 +7,7 @@ import {
   Navigate,
   redirect,
   useHistory,
+  useParams,
 } from "react-router-dom";
 import Survey from "../components/Survey";
 import Resources from "../components/Resources";
@@ -40,7 +41,8 @@ const PawPalContainer = ({}) => {
   const [breedState, setBreedState] = useState([]);
   const [reversedArray, setReversedArray] = useState([]);
   const [dogFactsState, setDogFactsState] = useState([]);
-
+  const [selectedBreed, setSelectedBreed] = useState(null);
+  
   useEffect(() => {
     getBreedState();
     getDogFactsState();
@@ -85,6 +87,8 @@ const PawPalContainer = ({}) => {
     setReversedArray(arraysort);
   }
 
+  
+
   const handleChange = (e) => {
     let key = e.target.name;
     let data = e.target.value;
@@ -105,6 +109,10 @@ const PawPalContainer = ({}) => {
     // window.location.assign("/result");
     // window.location.replace = "/result";
   };
+
+  const onBreedSelect = (selected) =>{
+    setSelectedBreed(selected)
+  }
 
   function getMatch() {
     matchBreed(formData, breedState);
@@ -217,6 +225,24 @@ const PawPalContainer = ({}) => {
 
   // matchBreed(formData, breedState);
 
+
+  const findBreedById = (breedToFind) => {
+    let found = null
+    for(let breed of breedState){
+      if(breedToFind.id == breedState.id){
+        found = breed
+      }
+    }
+    return found
+  }
+  const BreedDetailWrapper = () => {
+    const {id} = useParams()
+    let foundBreed = findBreedById(id)
+    return <DetailBreed breed={foundBreed}/>
+  }
+
+
+
   return (
     <div>
       <div>
@@ -241,9 +267,9 @@ const PawPalContainer = ({}) => {
             <Route path="/resources" element={<Resources />} />
             <Route
               path="/atozlist"
-              element={<AtoZList breeds={breedState} />}
+              element={<AtoZList breeds={breedState} onBreedSelect={onBreedSelect}/>}
             />
-            <Route path="/detailbreed" element={<DetailBreed />} />
+            <Route path="/detailbreed/:id" element={<BreedDetailWrapper/>} />
           </Routes>
         </Router>
         <div className="footer">

@@ -5,7 +5,7 @@ const DogFact = ({pawfacts}) => {
 
 useEffect(() => {
     getRandomFact()
-},[]);
+});
 
 const getRandomFact =() =>{
     const randomIndex = Math.floor(Math.random() * pawfacts.length);

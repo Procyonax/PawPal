@@ -1,10 +1,11 @@
 import React from 'react';
 
-const DetailBreed = () => {
+const DetailBreed = ({breed}) => {
   return (
     <div>
-      {/* <image> */}
-      {/* <h2>{breed.name}</h2>
+    {/* <img src={`../images/${breed.image}`} style={{ width: "250px" }} alt="dog"/> */}
+      <h2>{breed.name}</h2>
+    <h3>{breed.description}</h3>
     <p>{breed.trainability}</p>
    <p> {breed.health_issues}</p>
    <p> {breed.exercise_needed}</p>
@@ -18,7 +19,6 @@ const DetailBreed = () => {
     <p>{breed.friendliness_to_other_dogs}</p>
     <p>{breed.child_friendly}</p>
     <p>{breed.independence}</p>
-    <h3>{breed.description}</h3> */}
     </div>
   );
 };
