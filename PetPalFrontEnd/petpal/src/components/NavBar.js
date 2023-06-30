@@ -48,7 +48,7 @@ const NavBar = () => {
                   }
                   onClick={closeMobileMenu}
                 >
-                  Quiz
+                  Breed Match
                 </NavLink>
               </li>
               <li className="nav-item">

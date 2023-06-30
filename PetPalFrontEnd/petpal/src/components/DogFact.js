@@ -12,6 +12,7 @@ const getRandomFact =() =>{
     setRandomFact(pawfacts[randomIndex].description);
 };
 
+// console.log("test", randomFact);
 
 return (
 
