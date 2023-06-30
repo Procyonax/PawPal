@@ -226,10 +226,10 @@ const PawPalContainer = ({}) => {
   // matchBreed(formData, breedState);
 
 
-  const findBreedById = (breedToFind) => {
+  const findBreedById = (idToFind) => {
     let found = null
     for(let breed of breedState){
-      if(breedToFind.id == breedState.id){
+      if(breed.id == idToFind){
         found = breed
       }
     }
