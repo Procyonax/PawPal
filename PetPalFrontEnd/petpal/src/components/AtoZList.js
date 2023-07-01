@@ -11,7 +11,7 @@ const AtoZList = ({ breeds }) => {
     );
 
     const dogBreedListItems = dogBreedItems.map((breed, index) => {
-      return <li key={index}><BreedCard breed={breed}/></li>
+      return <p key={index}><BreedCard breed={breed}/></p>
     })
 
 
@@ -25,9 +25,9 @@ const AtoZList = ({ breeds }) => {
         placeholder="Search for a dog breed"
         onChange={(event) => setSearchTerm(event.target.value)}
       />
-      <ul>
+      <p>
         {dogBreedListItems}
-      </ul>
+      </p>
     </div>
   );
 };

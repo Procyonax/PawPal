@@ -1,0 +1,19 @@
+.resources{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.dog-image-detail{
+    padding-top: 25px;
+    width: 250px;
+}
+ 
+.logos{
+    height: 100px;
+}
+.logos-larger{
+    height: 150px;
+}
+
+.logo-sspca{
+    height: 50px;
+}

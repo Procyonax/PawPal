@@ -1,0 +1,12 @@
+.detail-breed{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.dog-image-detail{
+    padding-top: 25px;
+    width: 250px;
+}
+ 
+.ratings-list{
+    list-style: none;
+}
