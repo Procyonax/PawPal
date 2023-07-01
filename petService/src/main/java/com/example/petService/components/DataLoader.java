@@ -2,14 +2,21 @@ package com.example.petService.components;
 
 import com.example.petService.models.Breed;
 import com.example.petService.models.DogFact;
+import com.example.petService.models.PawProfile;
+import com.example.petService.models.PawTracker;
 import com.example.petService.repository.BreedRepository;
 import com.example.petService.repository.DogFactsRepository;
+import com.example.petService.repository.PawProfileRepository;
+import com.example.petService.repository.PawTrackerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
+
+import java.sql.Date;
+import java.time.LocalDate;
 
 @Profile("!test") //Run every time EXCEPT tests
 @Component
@@ -22,19 +29,23 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     DogFactsRepository dogFactsRepository;
 
+    @Autowired
+    PawProfileRepository pawProfileRepository;
+
+    @Autowired
+    PawTrackerRepository pawTrackerRepository;
+
     public DataLoader() {
 
     }
 
     public void run(ApplicationArguments args) throws Exception {
 
+
         DogFact fact1 = new DogFact("All dogs are identical in anatomy, with 321 bones and 42 permanent teeth.");
         dogFactsRepository.save(fact1);
-
-
         DogFact fact2 = new DogFact("All dogs can be traced back 40 million years ago to a weasel-like animal called the Miacis which dwelled in trees and dens. The Miacis later evolved into the Tomarctus, a direct forbear of the genus Canis, which includes the wolf and jackal as well as the dog.");
         dogFactsRepository.save(fact2);
-
         DogFact fact3 = new DogFact("Dogs like to chew bones but cooked bones and bones that can splinter such as cooked chicken bones should not be given to dogs.");
         dogFactsRepository.save(fact3);
         DogFact fact4 = new DogFact("A dog can both sniff and breathe at the same time.");
@@ -1231,6 +1242,65 @@ public class DataLoader implements ApplicationRunner {
                 "cavalier_king_charles_spaniel.jpg",
                 "Cavalier King Charles Spaniels are small and affectionate dogs with a friendly and gentle nature. They are well-suited for families and get along well with children and other pets. Cavaliers have a silky coat that requires regular grooming.");
         breedRepository.save(cavalierKingCharlesSpaniel);
+
+        PawProfile Baxter = new PawProfile("Baxter",LocalDate.of(2017,7,3), borderCollie, "APEX Vets", "5551234", "DMG Grooming", "5556789", "Baxter.jpg");
+        pawProfileRepository.save(Baxter);
+
+        PawTracker Baxter1 = new PawTracker(Baxter, LocalDate.of(2023,6,2), "Walking", 90);
+        pawTrackerRepository.save(Baxter1);
+        PawTracker Baxter2 = new PawTracker(Baxter, LocalDate.of(2023,6,2), "Walking", 90);
+        pawTrackerRepository.save(Baxter2);
+        PawTracker Baxter3 = new PawTracker(Baxter, LocalDate.of(2023,6,2), "Training", 60);
+        pawTrackerRepository.save(Baxter3);
+        PawTracker Baxter4 = new PawTracker(Baxter, LocalDate.of(2023,6,2), "Teeth brushing", 15);
+        pawTrackerRepository.save(Baxter4);
+        PawTracker Baxter5 = new PawTracker(Baxter, LocalDate.of(2023,6,2), "Brushing coat", 30);
+        pawTrackerRepository.save(Baxter5);
+        PawTracker Baxter6 = new PawTracker(Baxter, LocalDate.of(2023,6,3), "Walking", 90);
+        pawTrackerRepository.save(Baxter6);
+        PawTracker Baxter7 = new PawTracker(Baxter, LocalDate.of(2023,6,3), "Walking", 90);
+        pawTrackerRepository.save(Baxter7);
+        PawTracker Baxter8 = new PawTracker(Baxter, LocalDate.of(2023,6,3), "Training", 60);
+        pawTrackerRepository.save(Baxter8);
+        PawTracker Baxter9 = new PawTracker(Baxter, LocalDate.of(2023,6,3), "Teeth brushing", 15);
+        pawTrackerRepository.save(Baxter9);
+        PawTracker Baxter10 = new PawTracker(Baxter, LocalDate.of(2023,6,3), "Brushing coat", 30);
+        pawTrackerRepository.save(Baxter10);
+        PawTracker Baxter11 = new PawTracker(Baxter, LocalDate.of(2023,6,4), "Walking", 90);
+        pawTrackerRepository.save(Baxter11);
+        PawTracker Baxter12 = new PawTracker(Baxter, LocalDate.of(2023,6,4), "Walking", 90);
+        pawTrackerRepository.save(Baxter12);
+        PawTracker Baxter13 = new PawTracker(Baxter, LocalDate.of(2023,6,4), "Training", 60);
+        pawTrackerRepository.save(Baxter13);
+        PawTracker Baxter14 = new PawTracker(Baxter, LocalDate.of(2023,6,4), "Teeth brushing", 15);
+        pawTrackerRepository.save(Baxter14);
+        PawTracker Baxter15 = new PawTracker(Baxter, LocalDate.of(2023,6,4), "Brushing coat", 30);
+        pawTrackerRepository.save(Baxter15);
+        PawTracker Baxter16 = new PawTracker(Baxter, LocalDate.of(2023,6,5), "Walking", 90);
+        pawTrackerRepository.save(Baxter16);
+        PawTracker Baxter17 = new PawTracker(Baxter, LocalDate.of(2023,6,5), "Walking", 90);
+        pawTrackerRepository.save(Baxter17);
+        PawTracker Baxter18 = new PawTracker(Baxter, LocalDate.of(2023,6,5), "Training", 60);
+        pawTrackerRepository.save(Baxter18);
+        PawTracker Baxter19 = new PawTracker(Baxter, LocalDate.of(2023,6,5), "Teeth brushing", 15);
+        pawTrackerRepository.save(Baxter19);
+        PawTracker Baxter20 = new PawTracker(Baxter, LocalDate.of(2023,6,5), "Brushing coat", 30);
+        pawTrackerRepository.save(Baxter20);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
