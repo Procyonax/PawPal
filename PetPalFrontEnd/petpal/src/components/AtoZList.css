@@ -1,0 +1,24 @@
+
+.atoz-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+}
+
+.atoz-list-breed {
+    display: flex;
+    align-items: stretch;
+}
+
+@media screen and (min-width: 670px) {
+    .atoz-list-breed {
+        width: 22%;
+    }
+}
+
+.atoz-list-breed > div {
+    flex-grow: 1;
+}
