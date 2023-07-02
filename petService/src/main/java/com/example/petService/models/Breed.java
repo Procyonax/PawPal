@@ -1,7 +1,10 @@
 package com.example.petService.models;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
@@ -61,6 +64,10 @@ private String description;
 @GeneratedValue(strategy= GenerationType.IDENTITY)
 @Column(name="id")
 private Long id;
+
+@JsonBackReference
+@OneToMany(mappedBy = "breed", fetch = FetchType.LAZY)
+private List<PawProfile> profiles;
 
         public Breed(String name,
         int trainability,
