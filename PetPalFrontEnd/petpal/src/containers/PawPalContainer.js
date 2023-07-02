@@ -15,7 +15,7 @@ import AtoZList from "../components/AtoZList";
 import NavBar from "../components/NavBar";
 import DetailBreed from "../components/DetailBreed";
 import Splash from "../components/Splash";
-import Result from "../components/Result";
+import Result from "../components/ResultCarousel";
 import DogFact from "../components/DogFact";
 import Footer from "../components/Footer";
 

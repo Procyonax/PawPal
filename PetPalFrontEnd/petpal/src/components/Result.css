@@ -1,0 +1,76 @@
+.carousel-container {
+    margin: 0 auto;
+    padding: 2vw;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: #fff;
+    width: 80%;
+  }
+  .carousel-content {
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: #8c8c8c -1px 15px 30px -12px;
+    border-radius: 3%;
+  }
+  .carousel-header {
+    font-size: 12vw;
+  }
+
+  .carousel-img {
+    display: flex;
+    margin: 20px auto;
+    width: 75%;
+    border-radius: 3%;
+    box-shadow: #8c8c8c -1px 15px 30px -12px;
+  }
+
+  .carousel-inner-container {
+    margin: 0 auto;
+  }
+
+  .slick-prev {
+    left: -12vw !important;
+  }
+
+
+  .slick-next:before,
+  .slick-prev:before {
+    content: "" !important;
+  }
+
+  .paw-print-sliders{
+    width: 10vw;
+  }
+
+  .result-card-name:hover{
+    border-bottom: 2px solid #ff8400;
+  }
+
+  .result-card-description {
+    width: 90%;
+    margin: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+
+    .carousel-container {
+      width: 585px;
+    }
+  
+    .carousel-header{
+      font-size: 92px;
+    }
+
+    .carousel-img{
+      width: 470px;
+    }
+
+    .paw-print-sliders {
+     width: 76px; 
+    }
+
+    .slick-prev {
+      left: -80px !important;
+    }
+
+  }
