@@ -1,20 +1,13 @@
+html {
+  height: 100vh;
+}
+
 .App {
   text-align: center;
 }
 
-h2,
-h3 {
-  font-family: Belanosima;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.splash-header {
-  height: 60vw;
-  background: linear-gradient(transparent 90%, #ffa949),
-    linear-gradient(0deg, #fff, transparent),
-    #ffa949 url("./images/happy_dog_running.jpeg") no-repeat center;
-  background-size: cover;
-}
-
-.text-shadow {
-  text-shadow: #ffa949 5px 1px 10px;
-}

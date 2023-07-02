@@ -10,7 +10,7 @@
     text-align: center;
     margin-bottom: 30px;
     box-shadow: #8c8c8c -1px 15px 30px -12px;
-    border-radius: 3%;
+    border-radius: 5px;
   }
   .carousel-header {
     font-size: 12vw;
@@ -20,7 +20,7 @@
     display: flex;
     margin: 20px auto;
     width: 75%;
-    border-radius: 3%;
+    border-radius: 5px;
     box-shadow: #8c8c8c -1px 15px 30px -12px;
   }
 
