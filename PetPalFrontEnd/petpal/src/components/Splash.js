@@ -1,17 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../App.css'
+import './Splash.css'
 
 const Splash = () => {
   return (
-    <div>
-      <div className="splash-header"></div>
-      <div className="container-fluid px-3 px-md-5">
-        <h2 className="my-3 text-shadow">
-          Are you looking for your perfect pooch pal?
+    <div className="splash-container">
+      <div className="welcome-message">
+        <img className="welcome-img" src={`./images/happy_dog_running.jpeg`} alt="small happy dog running in a park"/>
+        <h2>
+          Looking for your perfect pooch pal?
         </h2>
-        <h3 className="my-3 text-shadow">We can help...</h3>
+      </div>
+      <div className="question-container">
+        <h3>We can help...</h3>
         <Link to="/survey">
-          <button className="btn btn-outline-primary">Take our survey</button>
+          <button className="quiz-link">Take our quiz</button>
         </Link>
       </div>
     </div>
