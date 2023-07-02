@@ -1,24 +1,37 @@
-import React from 'react';
+import React from "react";
+import "./DetailBreed.css";
+import PawPrint from "../icons/pawprint.svg";
 
-const DetailBreed = ({breed}) => {
+const DetailBreed = ({ breed }) => {
+  console.log(breed);
   return (
-    <div>
-    {/* <img src={`../images/${breed.image}`} style={{ width: "250px" }} alt="dog"/> */}
+    <div className="detail-breed">
+      <img
+        className="dog-image-detail"
+        src={`../images/${breed.image}`}
+        alt="dog"
+      />
       <h2>{breed.name}</h2>
-    <h3>{breed.description}</h3>
-    <p>{breed.trainability}</p>
-   <p> {breed.health_issues}</p>
-   <p> {breed.exercise_needed}</p>
-    <p>{breed.size}</p>
-    <p>{breed.drooling}</p>
-    <p>{breed.grooming}</p>
-    <p>{breed.hypoallergenic}</p>
-    <p>{breed.barking}</p>
-    <p>{breed.protective_rating}</p>
-    <p>{breed.sociability}</p>
-    <p>{breed.friendliness_to_other_dogs}</p>
-    <p>{breed.child_friendly}</p>
-    <p>{breed.independence}</p>
+      <p>{breed.description}</p>
+      <h3>
+        <img src={PawPrint} aria-hidden /> Ratings{" "}
+        <img src={PawPrint} aria-hidden />
+      </h3>
+      <ul className="ratings-list">
+        <li>Trainability: {breed.trainability}</li>
+        <li>Health Issues: {breed.healthIssues}</li>
+        <li>Exercise Needed: {breed.exerciseNeeded}</li>
+        <li>Size: {breed.size}</li>
+        <li>Drooling: {breed.drooling}</li>
+        <li> Grooming: {breed.grooming}</li>
+        <li>Hypoallergenic: {breed.hypoallergenic}</li>
+        <li>Barking: {breed.barking}</li>
+        <li>Protective: {breed.protectiveRating}</li>
+        <li>Sociability: {breed.sociability}</li>
+        <li>Friendliness To Other Dogs: {breed.friendlinessToOtherDogs}</li>
+        <li>Child Friendly: {breed.childFriendly}</li>
+        <li>Independence: {breed.independence}</li>
+      </ul>
     </div>
   );
 };

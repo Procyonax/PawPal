@@ -1027,24 +1027,6 @@ public class DataLoader implements ApplicationRunner {
                 "Bulldogs are known for their distinctive wrinkled face and muscular build. Despite their tough appearance, they are generally gentle and affectionate companions. They are not very active and are prone to certain health issues.");
         breedRepository.save(bulldog);
 
-        Breed poodle = new Breed("Poodle",
-                5,
-                3,
-                4,
-                "Varies",
-                1,
-                5,
-                5,
-                2,
-                2,
-                5,
-                4,
-                5,
-                1,
-                "poodle.jpg",
-                "Poodles are highly intelligent and versatile dogs. They come in three sizes: Standard, Miniature, and Toy. Poodles have hypoallergenic coats and require regular grooming. They excel in various dog sports and are often seen in dog shows.");
-        breedRepository.save(poodle);
-
         Breed siberianHusky = new Breed("Siberian Husky",
                 3,
                 3,
@@ -1243,6 +1225,131 @@ public class DataLoader implements ApplicationRunner {
                 "Cavalier King Charles Spaniels are small and affectionate dogs with a friendly and gentle nature. They are well-suited for families and get along well with children and other pets. Cavaliers have a silky coat that requires regular grooming.");
         breedRepository.save(cavalierKingCharlesSpaniel);
 
+        Breed toyPoodle = new Breed("Toy Poodle",
+                5,
+                2,
+                3,
+                "Small",
+                1,
+                5,
+                5,
+                3,
+                2,
+                5,
+                4,
+                4,
+                2,
+                "toy_poodle.jpg",
+                "Toy Poodles are small and intelligent dogs known for their elegant appearance and curly, dense coat. They are highly trainable and excel in various dog sports and activities. Toy Poodles are sociable and make wonderful companions for individuals and families.");
+        breedRepository.save(toyPoodle);
+
+        Breed standardPoodle = new Breed("Standard Poodle",
+                5,
+                3,
+                4,
+                "Large",
+                1,
+                5,
+                5,
+                2,
+                3,
+                5,
+                5,
+                5,
+                2,
+                "standard_poodle.jpg",
+                "Standard Poodles are elegant and versatile dogs known for their intelligence and athleticism. They have a curly, non-shedding coat and a well-proportioned body. Standard Poodles are highly trainable and excel in various activities, including obedience, agility, and retrieving.");
+        breedRepository.save(standardPoodle);
+
+        Breed miniaturePoodle = new Breed("Miniature Poodle",
+                5,
+                3,
+                4,
+                "Medium",
+                1,
+                5,
+                5,
+                2,
+                3,
+                5,
+                5,
+                5,
+                2,
+                "miniature_poodle.jpg",
+                "Miniature Poodles are lively and intelligent dogs known for their compact size and curly, dense coat. They are highly trainable and excel in various dog sports and activities. Miniature Poodles are sociable and make wonderful companions for individuals and families.");
+        breedRepository.save(miniaturePoodle);
+
+        Breed borderTerrier = new Breed("Border Terrier",
+                4,
+                4,
+                4,
+                "Small",
+                1,
+                4,
+                4,
+                3,
+                2,
+                5,
+                5,
+                5,
+                2,
+                "border_terrier.jpg",
+                "Border Terriers are small, feisty dogs with a reputation for being fearless. They are highly intelligent and easy to train, and they make great companions for active families. Border Terriers are also known for their friendly and playful nature, and they get along well with children and other dogs.");
+        breedRepository.save(borderTerrier);
+
+        Breed cockapoo = new Breed("Cockapoo",
+                4,
+                4,
+                3,
+                "Medium",
+                1,
+                3,
+                1,
+                2,
+                2,
+                5,
+                5,
+                5,
+                2,
+                "cockapoo.jpg",
+                "Cockapoos are a cross between a Cocker Spaniel and a Poodle, and they inherit the best qualities of both breeds. They are intelligent, friendly, and playful dogs that make great family pets. Cockapoos are also relatively low-maintenance dogs, and they do not require a lot of grooming. ");
+        breedRepository.save(cockapoo);
+
+        Breed cockerSpaniel = new Breed("Cocker Spaniel",
+                4,
+                4,
+                4,
+                "Medium",
+                1,
+                4,
+                3,
+                2,
+                2,
+                5,
+                5,
+                5,
+                2,
+                "cocker_spaniel.jpg",
+                "Cocker Spaniels are friendly, outgoing dogs that make great family pets. They are intelligent and eager to please their owners, and they are relatively easy to train. Cocker Spaniels are also very social dogs and enjoy being around people and other animals.");
+        breedRepository.save(cockerSpaniel);
+
+        Breed springerSpaniel = new Breed("Springer Spaniel",
+                4,
+                4,
+                4,
+                "Medium",
+                1,
+                4,
+                4,
+                2,
+                2,
+                5,
+                5,
+                5,
+                2,
+                "springer_spaniel.jpg",
+                "Springer Spaniels are friendly, outgoing dogs that make great family pets. They are intelligent and eager to please their owners, and they are relatively easy to train. Springer Spaniels are also very social dogs and enjoy being around people and other animals.");
+        breedRepository.save(springerSpaniel);
         PawProfile Baxter = new PawProfile("Baxter",LocalDate.of(2017,7,3), borderCollie, "APEX Vets", "5551234", "DMG Grooming", "5556789", "1Baxter.jpg");
         pawProfileRepository.save(Baxter);
         PawProfile Lassie = new PawProfile("Lassie",LocalDate.of(1938,7,3), borderCollie, "Rough Collie Vets", "5551940", "Come-Home Grooming", "5551968", "1Lassie.jpg");
@@ -1311,5 +1418,5 @@ public class DataLoader implements ApplicationRunner {
 
 
     }
-            }
+}
 
