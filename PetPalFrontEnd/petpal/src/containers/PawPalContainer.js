@@ -126,6 +126,25 @@ const PawPalContainer = ({}) => {
     let highestScore = 0;
     // nearestMatches.length = 0;
 
+// NEW EXPERIMENTAL ALGORITHM
+    // for (const breed of breedDatabase) {
+    //   let score = 0;
+    //   for (const key in formData) {
+    //     const criteriaValue = formData[key];
+    //     const breedValue = breed[key];
+    //     const weight = Math.abs(criteriaValue - breedValue) + 1;
+    //     score += weight;
+    //   }
+    //   closestMatches.push({ breed, score });
+    // }
+
+  //   matchScores.sort((a, b) => a.score - b.score);
+
+  // const bestMatch = matchScores[0].breed;
+  // const nearestMatches = matchScores.slice(1, 6).map((match) => match.breed);
+
+  // return { bestMatch, nearestMatches };
+
     for (const breed of breedDatabase) {
       let score = 0;
 

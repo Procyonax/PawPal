@@ -1,180 +1,157 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link } from "react-router-dom";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import "./Survey.css"; 
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
 
-const Survey = ({ handleChange, handleSubmit, formData }) => {
+const Survey = ({handleChange, handleSubmit, formData}) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [breedData, setBreedData] = useState({
+    trainability: 3,
+    health_issues: 3,
+    exercise_needed: 3,
+    size: 3,
+    drooling: 3,
+    grooming: 3,
+    hypoallergenic: 3,
+    barking: 3,
+    protective_rating: 3,
+    sociability: 3,
+    friendliness_to_other_dogs: 3,
+    child_friendly: 3,
+    independence: 3
+  });
+
+  const handleNext = (e) => {
+    e.preventDefault();
+    setCurrentSlide((prevSlide) => prevSlide + 1);
+  };
+
+  const handlePrevious = (e) => {
+    e.preventDefault();
+    setCurrentSlide((prevSlide) => prevSlide - 1);
+  };
+
+  const handleSliderChange = (name, value) => {
+    setBreedData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
   const handlePost = () => {
     handleSubmit();
-    // return <Link to="/result"></Link>
   };
+
+  const slides = [
+    {
+      name: "trainability",
+      label: "Trainability",
+      value: breedData.trainability,
+    },
+    {
+      name: "health_issues",
+      label: "Health Issues",
+      value: breedData.health_issues,
+    },
+    {
+      name: "exercise_needed",
+      label: "Exercise Needed",
+      value: breedData.exercise_needed,
+    },
+    {
+      name: "size",
+      label: "Size",
+      value: breedData.size,
+    },
+    {
+      name: "drooling",
+      label: "Drooling",
+      value: breedData.drooling,
+    },
+    {
+      name: "grooming",
+      label: "Grooming",
+      value: breedData.grooming,
+    },
+    {
+      name: "hypoallergenic",
+      label: "Hypoallergenic",
+      value: breedData.hypoallergenic,
+    },
+    {
+      name: "barking",
+      label: "Barking",
+      value: breedData.barking,
+    },
+    {
+      name: "protective_rating",
+      label: "Protective Rating",
+      value: breedData.protective_rating,
+    },
+    {
+      name: "sociability",
+      label: "Sociability",
+      value: breedData.sociability,
+    },
+    {
+      name: "friendliness_to_other_dogs",
+      label: "Friendliness to Other Dogs",
+      value: breedData.friendliness_to_other_dogs,
+    },
+    {
+      name: "child_friendly",
+      label: "Child Friendly",
+      value: breedData.child_friendly,
+    },
+    {
+      name: "independence",
+      label: "Independence",
+      value: breedData.independence,
+    },
+  ];
+
+  const currentSlideData = slides[currentSlide];
+  const isFinalSlide = currentSlide === slides.length - 1;
 
   return (
     <div>
-      <div>
-        <h1>Breed Form</h1>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Trainability:
-            <input
-              type="number"
-              name="trainability"
-              value={formData.trainability}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-          <label>
-            Health Issues:
-            <input
-              type="number"
-              name="healthIssues"
-              value={formData.healthIssues}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-          <label>
-            Exercise Needed:
-            <input
-              type="number"
-              name="exerciseNeeded"
-              value={formData.exerciseNeeded}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-          <label>
-            Size:
-            <select name="size" value={formData.size} onChange={handleChange}>
-              <option value="">Select size</option>
-              <option value="Small">Small</option>
-              <option value="Medium">Medium</option>
-              <option value="Large">Large</option>
-              <option value="Giant">Giant</option>
-            </select>
-          </label>
-          <br />
-          <label>
-            Drooling:
-            <input
-              type="number"
-              name="drooling"
-              value={formData.drooling}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-          <label>
-            Grooming:
-            <input
-              type="number"
-              name="grooming"
-              value={formData.grooming}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-          <label>
-            Hypoallergenic:
-            <input
-              type="number"
-              name="hypoallergenic"
-              value={formData.hypoallergenic}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-          <label>
-            Barking:
-            <input
-              type="number"
-              name="barking"
-              value={formData.barking}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-          <label>
-            Protective Rating:
-            <input
-              type="number"
-              name="protectiveRating"
-              value={formData.protectiveRating}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-          <label>
-            Sociability:
-            <input
-              type="number"
-              name="sociability"
-              value={formData.sociability}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-          <label>
-            Friendliness to Other Dogs:
-            <input
-              type="number"
-              name="friendlinessToOtherDogs"
-              value={formData.friendlinessToOtherDogs}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-          <label>
-            Child Friendly:
-            <input
-              type="number"
-              name="childFriendly"
-              value={formData.childFriendly}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-
-          <label>
-            Independence:
-            <input
-              type="number"
-              name="independence"
-              value={formData.independence}
-              onChange={handleChange}
-              min={0}
-              max={5}
-            />
-          </label>
-          <br />
-          <Link to="/result">
+      <h1></h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>{currentSlideData.label}: {currentSlideData.value}</label>
+          <input
+            type="range"
+            min="1"
+            max="5"
+            value={currentSlideData.value}
+            onChange={(e) =>
+              handleSliderChange(currentSlideData.name, parseInt(e.target.value))
+            }
+          />
+        </div>
+        <Link to="/result">
             <button onClick={handlePost}>Submit</button>
           </Link>
-        </form>
-      </div>
+        <div>
+          {currentSlide > 0 && (
+            <button onClick={handlePrevious}>Previous</button>
+          )}
+          {isFinalSlide ? (
+            <Link to="/result">
+            <button onClick={handlePost}>Submit</button>
+          </Link>
+          ) : (
+            <button onClick={handleNext}>Next</button>
+          )}
+        </div>
+      </form>
     </div>
   );
 };
+
 
 export default Survey;
