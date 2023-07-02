@@ -18,6 +18,10 @@ import Splash from "../components/Splash";
 import Result from "../components/ResultCarousel";
 import DogFact from "../components/DogFact";
 import Footer from "../components/Footer";
+import PawProfileList from "../components/PawProfileList";
+import PawProfileDetail from "../components/PawProfileDetail";
+import PawProfileForm from "../components/PawProfileForm";
+import Request from "../helpers/request";
 
 const PawPalContainer = ({}) => {
   const [formData, setFormData] = useState({
@@ -62,6 +66,23 @@ const PawPalContainer = ({}) => {
     request.get("/api/profiles")
     .then((data) => {
       setPawProfiles(data)
+    })
+  }
+
+  const handleDelete = (id) => {
+    const request = new Request()
+    const url = '/api/profiles' + id;
+    request.delete(url)
+    .then(() =>{
+      window.location = '/pawprofiles'
+    })
+  }
+
+  const handlePost = (pawProfile) =>{
+    const request = new Request()
+    request.post('/api/profiles', pawProfile)
+    .then(() => {
+      window.location = "/pawprofiles"
     })
   }
 
@@ -159,19 +180,19 @@ const PawPalContainer = ({}) => {
 
       // Compare each characteristic and increment the score for each match
 
-      if (formData.healthIssues == breed.healthIssues) {
+      if (formData.healthIssues === Number(breed.healthIssues)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(formData.healthIssues - breed.healthIssues);
         score += 2 / (diff + 1); // Weighted score based on the difference
       }
-      if (formData.trainability == breed.trainability) {
+      if (formData.trainability === Number(breed.trainability)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(formData.trainability - breed.trainability);
         score += 2 / (diff + 1); // Weighted score based on the difference
       }
-      if (formData.exerciseNeeded == breed.exerciseNeeded) {
+      if (formData.exerciseNeeded === Number(breed.exerciseNeeded)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(formData.exerciseNeeded - breed.exerciseNeeded);
@@ -180,31 +201,31 @@ const PawPalContainer = ({}) => {
       if (formData.size === breed.size) {
         score++;
       }
-      if (formData.drooling == breed.drooling) {
+      if (formData.drooling === Number(breed.drooling)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(formData.drooling - breed.drooling);
         score += 2 / (diff + 1); // Weighted score based on the difference
       }
-      if (formData.grooming == breed.grooming) {
+      if (formData.grooming === Number(breed.grooming)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(formData.grooming - breed.grooming);
         score += 2 / (diff + 1); // Weighted score based on the difference
       }
-      if (formData.hypoallergenic == breed.hypoallergenic) {
+      if (formData.hypoallergenic === Number(breed.hypoallergenic)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(formData.hypoallergenic - breed.hypoallergenic);
         score += 2 / (diff + 1); // Weighted score based on the difference
       }
-      if (formData.barking == breed.barking) {
+      if (formData.barking === Number(breed.barking)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(formData.barking - breed.barking);
         score += 2 / (diff + 1); // Weighted score based on the difference
       }
-      if (formData.protectiveRating == breed.protectiveRating) {
+      if (formData.protectiveRating === Number(breed.protectiveRating)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(
@@ -212,13 +233,13 @@ const PawPalContainer = ({}) => {
         );
         score += 2 / (diff + 1); // Weighted score based on the difference
       }
-      if (formData.sociability == breed.sociability) {
+      if (formData.sociability === Number(breed.sociability)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(formData.sociability - breed.sociability);
         score += 2 / (diff + 1); // Weighted score based on the difference
       }
-      if (formData.friendlinessToOtherDogs == breed.friendlinessToOtherDogs) {
+      if (formData.friendlinessToOtherDogs === Number(breed.friendlinessToOtherDogs)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(
@@ -226,13 +247,13 @@ const PawPalContainer = ({}) => {
         );
         score += 2 / (diff + 1); // Weighted score based on the difference
       }
-      if (formData.childFriendly == breed.childFriendly) {
+      if (formData.childFriendly === Number(breed.childFriendly)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(formData.childFriendly - breed.childFriendly);
         score += 2 / (diff + 1); // Weighted score based on the difference
       }
-      if (formData.independence == breed.independence) {
+      if (formData.independence === Number(breed.independence)) {
         score += 3; // Weighted score for exact match
       } else {
         const diff = Math.abs(formData.independence - breed.independence);
@@ -257,7 +278,7 @@ const PawPalContainer = ({}) => {
   const findBreedById = (idToFind) => {
     let found = null
     for(let breed of breedState){
-      if(breed.id == idToFind){
+      if(breed.id === Number(idToFind)){
         found = breed
       }
     }
@@ -292,6 +313,9 @@ const PawPalContainer = ({}) => {
               path="/result"
               element={<Result reversedArray={reversedArray} />}
             />
+            <Route path="/pawprofiles/:id" element={<PawProfileDetailWrapper/>}/>
+            {pawProfiles.length > 0 ?<Route path="/pawprofiles" element={<PawProfileList pawProfiles={pawProfiles} />}/>: null}
+            <Route path="/pawprofiles/new" element={<PawProfileForm breeds={breedState} onCreate={handlePost}/>}/>
             <Route path="/resources" element={<Resources />} />
             <Route
               path="/atozlist"

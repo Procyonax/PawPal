@@ -14,6 +14,7 @@ const PawProfileDetail = ({pawProfile, handleDelete}) => {
     return(
         <div>
             <PawProfile pawProfile={pawProfile} />
+            <button onClick={onDelete}>Delete {pawProfile.petName}</button>
         </div>
     )
 }
