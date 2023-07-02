@@ -42,10 +42,13 @@ const PawPalContainer = ({}) => {
   const [reversedArray, setReversedArray] = useState([]);
   const [dogFactsState, setDogFactsState] = useState([]);
   const [selectedBreed, setSelectedBreed] = useState(null);
+  const [pawProfiles, setPawProfiles] = useState([]);
+  const [pawTrackers, setPawTrackers] = useState([]);
   
   useEffect(() => {
     getBreedState();
     getDogFactsState();
+    getPawProfiles();
   }, []);
 
   useEffect(() => {
@@ -53,6 +56,31 @@ const PawPalContainer = ({}) => {
       getReverseArray();
     }
   }, [nearestMatches]);
+
+  const getPawProfiles = () => {
+    const request = new Request()
+    request.get("/api/profiles")
+    .then((data) => {
+      setPawProfiles(data)
+    })
+  }
+
+  const PawProfileDetailWrapper = () => {
+    // extract the id from the url
+    const {id} = useParams()
+    let foundPawProfile = findPawProfileById(id)
+    return<PawProfileDetail pawProfile={foundPawProfile} handleDelete={handleDelete} />
+  }
+
+  const findPawProfileById = (id) => {
+    let foundPawProfile = null;
+    for(let pawProfile of pawProfiles){
+      if(pawProfile.id === parseInt(id)){
+        foundPawProfile = pawProfile
+      }
+    }
+    return foundPawProfile;
+  }
 
   const getBreedState = function () {
     let breeds = [];
