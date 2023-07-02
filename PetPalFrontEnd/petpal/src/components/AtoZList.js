@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import {Link} from "react-router-dom"
 import BreedCard from "./BreedCard";
+import "./AtoZList.css";
+import PawPrint from "../icons/pawprint.svg";
 
 const AtoZList = ({ breeds }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -11,23 +13,25 @@ const AtoZList = ({ breeds }) => {
     );
 
     const dogBreedListItems = dogBreedItems.map((breed, index) => {
-      return <p key={index}><BreedCard breed={breed}/></p>
+      return <div className='atoz-list-breed' key={index}><BreedCard breed={breed}/></div>
     })
-
-
 
 
   return (
     <div>
-      <h1>AtoZ of Dogs</h1>
+      <h1>
+      <img src={PawPrint} aria-hidden />
+        AtoZ of Dogs
+      <img src={PawPrint} aria-hidden />
+      </h1>
       <input
         type="text"
         placeholder="Search for a dog breed"
         onChange={(event) => setSearchTerm(event.target.value)}
       />
-      <p>
+      <div className='atoz-list'>
         {dogBreedListItems}
-      </p>
+      </div>
     </div>
   );
 };
