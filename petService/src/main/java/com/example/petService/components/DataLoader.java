@@ -1243,8 +1243,15 @@ public class DataLoader implements ApplicationRunner {
                 "Cavalier King Charles Spaniels are small and affectionate dogs with a friendly and gentle nature. They are well-suited for families and get along well with children and other pets. Cavaliers have a silky coat that requires regular grooming.");
         breedRepository.save(cavalierKingCharlesSpaniel);
 
-        PawProfile Baxter = new PawProfile("Baxter",LocalDate.of(2017,7,3), borderCollie, "APEX Vets", "5551234", "DMG Grooming", "5556789", "Baxter.jpg");
+        PawProfile Baxter = new PawProfile("Baxter",LocalDate.of(2017,7,3), borderCollie, "APEX Vets", "5551234", "DMG Grooming", "5556789", "1Baxter.jpg");
         pawProfileRepository.save(Baxter);
+        PawProfile Lassie = new PawProfile("Lassie",LocalDate.of(1938,7,3), borderCollie, "Rough Collie Vets", "5551940", "Come-Home Grooming", "5551968", "1Lassie.jpg");
+        pawProfileRepository.save(Lassie);
+        PawProfile Marley = new PawProfile("Marley",LocalDate.of(2008,9,17), labradorRetriever, "Me Vets", "5551234", "Jen and Owen Grooming", "5556789", "1Marley.jpg");
+        pawProfileRepository.save(Marley);
+        PawProfile Laika = new PawProfile("Laika",LocalDate.of(1957,6,24), bolognese, "Sputnik2 Vets", "5551234", "Dezik and Tsygan Grooming", "5551951", "1Laika.jpg");
+        pawProfileRepository.save(Laika);
+
 
         PawTracker Baxter1 = new PawTracker(Baxter, LocalDate.of(2023,6,2), "Walking", 90);
         pawTrackerRepository.save(Baxter1);
