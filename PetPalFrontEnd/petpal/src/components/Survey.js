@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Survey.css";
+import "./styles.css/Survey.css";
 
 const Survey = ({ handleChange, handleSubmit, formData }) => {
   const handlePost = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./BreedCard.css";
+import "./styles.css/BreedCard.css";
 
 const BreedCard = ({ breed }) => {
   return (

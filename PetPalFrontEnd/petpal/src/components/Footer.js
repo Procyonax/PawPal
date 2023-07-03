@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./styles.css/Footer.css";
 import DogFact from "./DogFact";
 
 const Footer = ({ pawfacts }) => {

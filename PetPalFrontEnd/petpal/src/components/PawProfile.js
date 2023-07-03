@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import "../App.css"
+import "./styles.css/PawProfile.css"
 
 const PawProfile = ({ pawProfile, handleDelete }) => {
   if (!pawProfile) {
@@ -8,23 +10,23 @@ const PawProfile = ({ pawProfile, handleDelete }) => {
   const url = "/pawprofiles/" + pawProfile.id;
   return (
     <Fragment>
-      <p>
+      <div className="paw-profile-card">
+      <div className="paw-profile-card-hover">
         <Link to={url}>
           <img
             src={`../Images/${pawProfile.petImage}`}
             alt={`${pawProfile.petname}`}
-            className="carousel-img"
+            className="paw-profile-img"
           />
-          {pawProfile.petName}
+          <h2>{pawProfile.petName}</h2>
         </Link>
-      </p>
-      <p>{pawProfile.petDob}</p>
-      <p>
-        {pawProfile.vetName} {pawProfile.vetNumber}
-      </p>
-      <p>
-        {pawProfile.groomerName} {pawProfile.groomerNumber}
-      </p>
+      <p>D.O.B. : {pawProfile.petDob}</p>
+      <p>Vet Name : {pawProfile.vetName}</p>
+      <p>Vet Contact : {pawProfile.vetNumber}</p>
+      <p>Groomer Name : {pawProfile.groomerName}</p>
+      <p>Groomer Contact : {pawProfile.groomerNumber}</p>
+      </div>
+      </div>
     </Fragment>
   );
 };

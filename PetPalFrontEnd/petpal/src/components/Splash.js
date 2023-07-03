@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-import "./Splash.css";
+import "./styles.css/Splash.css";
 
 const Splash = () => {
   return (

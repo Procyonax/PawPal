@@ -3,7 +3,7 @@ import ResultCard from "./ResultCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Result.css";
+import "./styles.css/Result.css";
 import "../App.css";
 
 const Result = ({ reversedArray }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Resources.css";
+import "./styles.css/Resources.css";
 import PawPrint from "../icons/pawprint.svg";
 
 const Resources = () => {
