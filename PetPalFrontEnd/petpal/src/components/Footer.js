@@ -4,11 +4,13 @@ import DogFact from "./DogFact";
 
 const Footer = ({ pawfacts }) => {
   return (
-    <div className="footer">
+    <div className="footer-container">
+    <footer className="footer">
       <p>
         <DogFact pawfacts={pawfacts} />
       </p>
       <hr></hr>© Tom Gibbons, Scott Hynd, Beth Lupton, Gregor Ross
+    </footer>
     </div>
   );
 };

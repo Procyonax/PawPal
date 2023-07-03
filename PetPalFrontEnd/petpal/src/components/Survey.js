@@ -9,7 +9,6 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
   };
 
   return (
-    <div>
       <div className="survey-container">
         <form onSubmit={handleSubmit}>
           <label>
@@ -210,7 +209,6 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </Link>
         </form>
       </div>
-    </div>
   );
 };
 
