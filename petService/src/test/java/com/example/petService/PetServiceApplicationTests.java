@@ -2,6 +2,7 @@ package com.example.petService;
 
 import com.example.petService.models.Breed;
 import com.example.petService.models.PawProfile;
+import com.example.petService.models.PawTracker;
 import com.example.petService.repository.BreedRepository;
 import com.example.petService.repository.PawProfileRepository;
 import com.example.petService.repository.PawTrackerRepository;
@@ -145,5 +146,12 @@ class PetServiceApplicationTests {
 		pawProfileRepository.save(Scooby);
 		pawProfileRepository.delete(Scooby);
 		assertEquals(4, pawProfileRepository.count());
+	}
+
+	@Test
+	public void canFindTrackersByPawProfileId(){
+		List<PawTracker> found = pawTrackerRepository.findByProfileId(2L);
+		assertTrue(found.size()>0);
+
 	}
 }
