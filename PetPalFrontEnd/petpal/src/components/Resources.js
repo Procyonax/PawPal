@@ -18,6 +18,7 @@ const Resources = () => {
             
           >
             <img className="logos-larger" src="../images/dogs_trust_logo.jpg" alt="{dogs_trust_logo}"/>
+
           </a>
         </h3>
         <p>
@@ -31,7 +32,12 @@ const Resources = () => {
             target="_blank"
             alt="{battersea_dog_and_cat_home_logo}"
           >
-            <img className="logos-larger" src="../images/battersea_logo.jpg" aria-hidden alt="battersea-logo"/>
+            <img
+              className="logos-larger"
+              src="../images/battersea_logo.jpg"
+              aria-hidden
+              alt="battersea-logo"
+            />
           </a>
         </h3>
         <p>
@@ -148,4 +154,3 @@ const Resources = () => {
 };
 
 export default Resources;
-

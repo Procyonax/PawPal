@@ -4,51 +4,52 @@ h3 {
 }
 
 .splash-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .welcome-img {
-    margin: 10px auto;
-    width: 90%;
-    border-radius: 5px;
-    box-shadow: #8c8c8c -1px 15px 30px -12px;
+  margin: 10px auto;
+  width: 90%;
+  border-radius: 5px;
+  box-shadow: #8c8c8c -1px 15px 30px -12px;
 }
 
-.welcome-message, .question-container {
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto;
-    width: 80%;
-    border-radius: 5px;
-    box-shadow: #8c8c8c -1px 15px 30px -12px;
+.welcome-message,
+.question-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: #8c8c8c -1px 15px 30px -12px;
 }
 
 .quiz-link {
-    padding: 0.7rem 2rem;
-    font-weight: 700;
-    text-decoration: none;
-    border: 0.3rem solid #000;
-    border-radius: 3rem;
-    margin: 5px 0;
+  padding: 0.7rem 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 0.3rem solid #000;
+  border-radius: 3rem;
+  margin: 5px 0;
 }
 
-.quiz-link:hover{
-    background-color: #000;
-    color: #fff;
+.quiz-link:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .splash-container {
+    flex-direction: row;
   }
 
-  @media screen and (min-width: 768px) {
-
-    .splash-container {
-        flex-direction: row;
-    }
-
-    .welcome-message, .question-container {
-        width: 45%;
-        }
-
-    .question-container {
-        justify-content: space-evenly;
-    }
+  .welcome-message,
+  .question-container {
+    width: 45%;
   }
+
+  .question-container {
+    justify-content: space-evenly;
+  }
+}

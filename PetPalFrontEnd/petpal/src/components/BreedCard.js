@@ -1,5 +1,5 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 import "./BreedCard.css";
 
 const BreedCard = ({breed})=>{
@@ -21,4 +21,4 @@ return(
 
 }
 
-export default BreedCard
+export default BreedCard;

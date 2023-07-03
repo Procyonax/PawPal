@@ -11,17 +11,20 @@ const AtoZList = ({ breeds }) => {
       breed.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    const dogBreedListItems = dogBreedItems.map((breed, index) => {
-      return <div className='atoz-list-breed' key={index}><BreedCard breed={breed}/></div>
-    })
-
+  const dogBreedListItems = dogBreedItems.map((breed, index) => {
+    return (
+      <div className="atoz-list-breed" key={index}>
+        <BreedCard breed={breed} />
+      </div>
+    );
+  });
 
   return (
     <div>
       <h1>
-      <img src={PawPrint} aria-hidden  alt="paw-print-icon"/>
+        <img src={PawPrint} aria-hidden alt="paw-print-icon" />
         AtoZ of Dogs
-      <img src={PawPrint} aria-hidden alt="paw-print-icon"/>
+        <img src={PawPrint} aria-hidden alt="paw-print-icon" />
       </h1>
       <input
         className="search-bar"
@@ -29,10 +32,8 @@ const AtoZList = ({ breeds }) => {
         placeholder="Search for a dog breed"
         onChange={(event) => setSearchTerm(event.target.value)}
       />
-      <div className='atoz-list'>
-        {dogBreedListItems}
-        <h1>Hello</h1>
-      </div>
+
+      <div className="atoz-list">{dogBreedListItems}</div>
     </div>
   );
 };
