@@ -1,26 +1,23 @@
-import React, { useEffect, useState } from 'react';
-const DogFact = ({pawfacts}) => {
+import React, { useEffect, useState } from "react";
+const DogFact = ({ pawfacts }) => {
+  const [randomFact, setRandomFact] = useState("");
 
-    const [randomFact, setRandomFact] = useState('')
+  useEffect(() => {
+    getRandomFact();
+  });
 
-useEffect(() => {
-    getRandomFact()
-});
-
-const getRandomFact =() =>{
+  const getRandomFact = () => {
     const randomIndex = Math.floor(Math.random() * pawfacts.length);
     setRandomFact(pawfacts[randomIndex].description);
-};
+  };
 
-// console.log("test", randomFact);
+  // console.log("test", randomFact);
 
-return (
-
+  return (
     <div>
-    <p>{randomFact}</p>
+      <p>{randomFact}</p>
     </div>
-)
-
-}
+  );
+};
 
 export default DogFact;
