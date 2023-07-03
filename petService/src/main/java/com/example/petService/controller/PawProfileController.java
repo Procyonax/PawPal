@@ -25,9 +25,9 @@ public class PawProfileController {
     }
 
     @PostMapping(value = "/profiles")
-    public ResponseEntity<PawProfile> createProfile(@RequestBody PawProfile profile){
-        pawProfileRepository.save(profile);
-        return new ResponseEntity<>(profile, HttpStatus.OK);
+    public ResponseEntity<PawProfile> createProfile(@RequestBody PawProfile pawProfile){
+        pawProfileRepository.save(pawProfile);
+        return new ResponseEntity<>(pawProfile, HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/profiles/{id}")
@@ -38,8 +38,8 @@ public class PawProfileController {
     }
 
     @PatchMapping(value = "/profile/{id}")
-    public ResponseEntity<PawProfile> updateProfile(@RequestBody PawProfile profile){
-        pawProfileRepository.save(profile);
-        return new ResponseEntity<>(profile, HttpStatus.OK);
+    public ResponseEntity<PawProfile> updateProfile(@RequestBody PawProfile pawProfile){
+        pawProfileRepository.save(pawProfile);
+        return new ResponseEntity<>(pawProfile, HttpStatus.OK);
     }
 }

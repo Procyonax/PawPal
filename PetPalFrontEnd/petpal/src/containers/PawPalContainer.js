@@ -71,7 +71,7 @@ const PawPalContainer = ({}) => {
 
   const handleDelete = (id) => {
     const request = new Request()
-    const url = '/api/profiles' + id;
+    const url = '/api/profiles/' + id;
     request.delete(url)
     .then(() =>{
       window.location = '/pawprofiles'

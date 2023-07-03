@@ -45,6 +45,7 @@ const PawProfileForm = ({breeds, onCreate}) =>{
     return(
         <div>
             <form onSubmit={handleSubmit}>
+                <p>
                 <input
                 type="text"
                 placeholder="Pet Name"
@@ -52,17 +53,23 @@ const PawProfileForm = ({breeds, onCreate}) =>{
                 onChange={handleChange}
                 value={statePawProfile.petName}
                 ></input>
-                               <input
+                </p>
+                <p>
+                <input
                 type="Date"
                 placeholder="Pet DOB"
                 name="petDob"
                 onChange={handleChange}
                 value={statePawProfile.petDob}
                 ></input>
+                </p>
+                <p>
                 <select name="breed" onChange={handleBreed} defaultValue="select-breed">
                     <option disabled value="select-breed">Select a breed of dog</option>
                     {breedOptions}
                 </select>
+                </p>
+                <p>
                <input
                 type="text"
                 placeholder="Vet Name"
@@ -70,6 +77,8 @@ const PawProfileForm = ({breeds, onCreate}) =>{
                 onChange={handleChange}
                 value={statePawProfile.vetName}
                 ></input>
+                </p>
+                <p>
                 <input
                 type="text"
                 placeholder="Vet Number"
@@ -77,6 +86,8 @@ const PawProfileForm = ({breeds, onCreate}) =>{
                 onChange={handleChange}
                 value={statePawProfile.vetNumber}
                 ></input>
+                </p>
+                <p>
                <input
                 type="text"
                 placeholder="Groomer name"
@@ -84,20 +95,25 @@ const PawProfileForm = ({breeds, onCreate}) =>{
                 onChange={handleChange}
                 value={statePawProfile.groomerName}
                 ></input>
-                               <input
+                </p>
+                <p>
+                <input
                 type="text"
                 placeholder="Groomer number"
                 name="groomerNumber"
                 onChange={handleChange}
                 value={statePawProfile.groomerNumber}
                 ></input>
-                               <input
-                type="text"
+                </p>
+                <p>
+                <input
+                type="file"
                 placeholder="Pet Image"
                 name="petImage"
                 onChange={handleChange}
                 value={statePawProfile.petImage}
                 ></input>
+                </p>
                 <button type="submit">Save</button>
             </form>
         </div>
