@@ -107,7 +107,8 @@ const PawProfileForm = ({breeds, onCreate}) =>{
                 </p>
                 <p>
                 <input
-                type="file"
+                type="text"
+                // accept="image/png, image/jpeg, image/jpg, image/svg"
                 placeholder="Pet Image"
                 name="petImage"
                 onChange={handleChange}

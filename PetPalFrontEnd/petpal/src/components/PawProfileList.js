@@ -9,9 +9,6 @@ const PawProfileList = ({pawProfiles}) =>{
 
         return(
             <div>
-            <Link to="/pawprofiles/new">
-            <button>Add Profile</button>
-            </Link>   
             <li key={index}>
                 <div>
                     <PawProfile pawProfile={pawProfile} />
@@ -21,7 +18,11 @@ const PawProfileList = ({pawProfiles}) =>{
         )
     }) 
     return (
+
         <div>
+            <Link to="/pawprofiles/new">
+            <button >Add Profile</button>
+            </Link>   
             {pawProfileElements}
         </div>
     )
