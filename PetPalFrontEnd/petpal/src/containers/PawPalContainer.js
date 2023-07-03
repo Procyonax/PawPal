@@ -3,10 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useNavigate,
-  Navigate,
-  redirect,
-  useHistory,
   useParams,
 } from "react-router-dom";
 import Survey from "../components/Survey";
@@ -16,10 +12,9 @@ import NavBar from "../components/NavBar";
 import DetailBreed from "../components/DetailBreed";
 import Splash from "../components/Splash";
 import Result from "../components/ResultCarousel";
-import DogFact from "../components/DogFact";
 import Footer from "../components/Footer";
 
-const PawPalContainer = ({}) => {
+const PawPalContainer = () => {
   const [formData, setFormData] = useState({
     name: "",
     trainability: "3",
@@ -41,7 +36,7 @@ const PawPalContainer = ({}) => {
   const [breedState, setBreedState] = useState([]);
   const [reversedArray, setReversedArray] = useState([]);
   const [dogFactsState, setDogFactsState] = useState([]);
-  const [selectedBreed, setSelectedBreed] = useState(null);
+  const setSelectedBreed = useState(null);
   
   useEffect(() => {
     getBreedState();
@@ -55,14 +50,12 @@ const PawPalContainer = ({}) => {
   }, [nearestMatches]);
 
   const getBreedState = function () {
-    let breeds = [];
     fetch("/api/breeds")
       .then((res) => res.json())
       .then((breeds) => setBreedState(breeds));
   };
 
   const  getDogFactsState = function () {
-    let pawfacts = [];
     fetch("/api/dogfacts")
       .then((res) => res.json())
       .then((pawfacts) => setDogFactsState(pawfacts))
@@ -122,7 +115,7 @@ const PawPalContainer = ({}) => {
     console.log("formData", formData);
     console.log("breedDB", breedDatabase);
     let closestMatches = [];
-    let bestMatch = null;
+    // let bestMatch = null;
     let highestScore = 0;
     // nearestMatches.length = 0;
 
@@ -214,7 +207,7 @@ const PawPalContainer = ({}) => {
       // Update the best match if the current breed has a higher score
       if (score > highestScore) {
         highestScore = score;
-        bestMatch = breed;
+        // bestMatch = breed;
         closestMatches.push(breed);
       }
     }

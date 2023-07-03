@@ -18,7 +18,7 @@ const NavBar = () => {
           <div className="navbar-container">
             {/* Logo routes to home and closes mobile menu when clicked */}
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-              <img src="/25Logo.webp" className="navbar-icon" />
+              <img src="/25Logo.webp" className="navbar-icon" aria-hidden alt="paw-pal-icon"/>
             </Link>
             {/* Switches burger between bars when inactive and cross when active */}
             <div className="menu-icon" onClick={handleClick}>

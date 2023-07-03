@@ -7,17 +7,17 @@ const Resources = () => {
     <div>
       <div className="resources">
         <h2>
-          <img src={PawPrint} aria-hidden />
+          <img src={PawPrint} aria-hidden alt="paw-print-icon" />
           Find your perfect pooch
-          <img src={PawPrint} aria-hidden />
+          <img src={PawPrint} aria-hidden alt="paw-print-icon" />
         </h2>
         <h3>
           <a
             href="https://www.dogstrust.org.uk/"
-            target="_blank"
-            alt="{dogs_trust_logo}"
+            rel="external"
+            
           >
-            <img className="logos-larger" src="../images/dogs_trust_logo.jpg" />
+            <img className="logos-larger" src="../images/dogs_trust_logo.jpg" alt="{dogs_trust_logo}"/>
           </a>
         </h3>
         <p>
@@ -28,10 +28,10 @@ const Resources = () => {
         <h3>
           <a
             href="https://www.battersea.org.uk/"
-            target="_blank"
+            rel="external"
             alt="{battersea_dog_and_cat_home_logo}"
           >
-            <img className="logos-larger" src="../images/battersea_logo.jpg" />
+            <img className="logos-larger" src="../images/battersea_logo.jpg" aria-hidden alt="battersea-logo"/>
           </a>
         </h3>
         <p>
@@ -40,7 +40,7 @@ const Resources = () => {
           quirks so we can find them a new home that`s just right for them.
         </p>
         <h3>
-          <a href="https://www.scottishspca.org/" target="_blank">
+          <a href="https://www.scottishspca.org/" rel="external">
             <img
               className="logo-sspca"
               src="../images/spca_logo.jpg"
@@ -56,7 +56,7 @@ const Resources = () => {
           We are Scotland's animal champions.
         </p>
         <h3>
-          <a href="https://www.rspca.org.uk/home" target="_blank">
+          <a href="https://www.rspca.org.uk/home" rel="external">
             <img
               className="logos"
               src="../images/rspca_logo.jpg"
@@ -70,7 +70,7 @@ const Resources = () => {
           fundraising and donations to carry out our vital work.
         </p>
         <h3>
-          <a href="https://www.bluecross.org.uk/" target="_blank">
+          <a href="https://www.bluecross.org.uk/" rel="external">
             <img
               className="logos"
               src="../images/blue_cross_logo.jpg"
@@ -86,14 +86,14 @@ const Resources = () => {
       </div>
       <div div className="resources">
         <h2>
-          <img src={PawPrint} aria-hidden />
+          <img src={PawPrint} aria-hidden alt="paw-print-icon" />
           Find a vet near you
-          <img src={PawPrint} aria-hidden />
+          <img src={PawPrint} aria-hidden alt="paw-print-icon" />
         </h2>
         <h3>
           <a
             href="https://findavet.rcvs.org.uk/home/?&&type=rfst&set=true#cookie-widget"
-            target="_blank"
+            rel="external"
           >
             <img
               className="logos-larger"
@@ -112,12 +112,12 @@ const Resources = () => {
       </div>
       <div div className="resources">
         <h2>
-          <img src={PawPrint} aria-hidden />
+          <img src={PawPrint} aria-hidden alt="paw-print-icon" />
           Pet Sitters for when you are away
-          <img src={PawPrint} aria-hidden />
+          <img src={PawPrint} aria-hidden alt="paw-print-icon" />
         </h2>
         <h3>
-          <a href="https://www.rover.com/" target="_blank">
+          <a href="https://www.rover.com/" rel="external">
             <img
               className="logos"
               src="../images/rover_logo.jpg"
@@ -130,7 +130,7 @@ const Resources = () => {
           treat your pets like family.
         </p>
         <h3>
-          <a href="https://www.trustedhousesitters.com/" target="_blank">
+          <a href="https://www.trustedhousesitters.com/" rel="external">
             <img
               className="logos"
               src="../images/trusted_house_sitters_logo.jpg"
@@ -149,5 +149,3 @@ const Resources = () => {
 
 export default Resources;
 
-{
-}

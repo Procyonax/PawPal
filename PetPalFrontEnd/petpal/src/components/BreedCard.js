@@ -6,7 +6,7 @@ const BreedCard = ({breed})=>{
 
 
 return(
-    <a className='hover-links' href="#">
+    <a className='hover-links'>
     <Link className='breed-link' to={"/detailbreed/" + breed.id}>
             <img className='breed-card-image'
             src={`../images/${breed.image}`}

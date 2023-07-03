@@ -14,8 +14,8 @@ const DetailBreed = ({ breed }) => {
       <h2>{breed.name}</h2>
       <p>{breed.description}</p>
       <h3>
-        <img src={PawPrint} aria-hidden /> Ratings{" "}
-        <img src={PawPrint} aria-hidden />
+        <img src={PawPrint} aria-hidden alt="paw-print-icon" /> Ratings{" "}
+        <img src={PawPrint} aria-hidden alt="paw-print-icon" />
       </h3>
       <ul className="ratings-list">
         <li>Trainability: {breed.trainability}</li>
