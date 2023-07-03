@@ -2,9 +2,6 @@ import React, {useState} from 'react';
 
 const PawProfileEditForm = ({pawProfile, breeds, handleUpdate}) => {
 
-    if (!pawProfile){
-        return <p>Loading...</p>
-    }
 
     const [statePawProfile, setStatePawProfile] = useState({
 

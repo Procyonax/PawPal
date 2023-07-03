@@ -41,7 +41,7 @@ const PawPalContainer = () => {
   const [breedState, setBreedState] = useState([]);
   const [reversedArray, setReversedArray] = useState([]);
   const [dogFactsState, setDogFactsState] = useState([]);
-  const [setSelectedBreed] = useState(null);
+  const [selectedBreed, setSelectedBreed] = useState(null);
   const [pawProfiles, setPawProfiles] = useState([]);
   // const [pawTrackers, setPawTrackers] = useState([]);
 
@@ -49,12 +49,7 @@ const PawPalContainer = () => {
     getBreedState();
     getDogFactsState();
     getPawProfiles();
-  }, []);
-
-  useEffect(() => {
-    if (nearestMatches.length > 0) {
-      getReverseArray();
-    }
+    getReverseArray();
   }, [nearestMatches]);
 
   const getPawProfiles = () => {
@@ -133,7 +128,8 @@ const PawPalContainer = () => {
     setNearestMatches(matches);
   };
 
-  function getReverseArray() {
+  const getReverseArray = function () {
+    console.log("reversed array:", nearestMatches);
     reverseArray(nearestMatches);
   }
 
