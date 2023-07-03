@@ -122,4 +122,28 @@ class PetServiceApplicationTests {
 		assertEquals(5, pawProfileRepository.count());
 	}
 
+	@Test
+	public void canDeletePawProfile(){
+		Breed scooby = new Breed("Scooby",
+				3,
+				3,
+				4,
+				"Large",
+				2,
+				3,
+				4,
+				5,
+				3,
+				4,
+				3,
+				4,
+				4,
+				"scooby.jpg",
+				"Classic virtual cartoon great dane");
+		breedRepository.save(scooby);
+		PawProfile Scooby = new PawProfile("Scooby", LocalDate.of(1980,3,17), scooby, "Mystery machine Vets", "5551234", "Those pesky kids Grooming", "5551951", "1Scooby.jpg");
+		pawProfileRepository.save(Scooby);
+		pawProfileRepository.delete(Scooby);
+		assertEquals(4, pawProfileRepository.count());
+	}
 }
