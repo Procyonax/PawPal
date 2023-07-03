@@ -5,6 +5,8 @@
 .dog-image-detail{
     padding-top: 25px;
     width: 250px;
+    border-radius: 5px;
+    box-shadow: #8c8c8c -1px 15px 30px -12px;
 }
  
 .ratings-list{
