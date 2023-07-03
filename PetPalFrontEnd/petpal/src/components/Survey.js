@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import './Survey.css'
+import "./Survey.css";
 
 const Survey = ({ handleChange, handleSubmit, formData }) => {
   const handlePost = () => {
@@ -10,11 +10,12 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
 
   return (
     <div>
-      <div className='survey-container'>
+      <div className="survey-container">
         <form onSubmit={handleSubmit}>
           <label>
-          On a scale of 1 to 5, how important is it to you that your new dog is easily trainable?
-          <br/>
+            On a scale of 1 to 5, how important is it to you that your new dog
+            is easily trainable?
+            <br />
             <input
               type="range"
               name="trainability"
@@ -25,10 +26,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
-          <br/>
+          <br />
           <label>
-          How concerned are you about potential health issues in your new dog, on a scale of 1 to 5?
-          <br/>
+            How concerned are you about potential health issues in your new dog,
+            on a scale of 1 to 5?
+            <br />
             <input
               type="range"
               name="healthIssues"
@@ -38,11 +40,12 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
               max={5}
             />
           </label>
-          <br/>
+          <br />
           <br />
           <label>
-          When it comes to exercise needs, how would you rate your preference for your new dog on a scale of 1 to 5?
-          <br/>
+            When it comes to exercise needs, how would you rate your preference
+            for your new dog on a scale of 1 to 5?
+            <br />
             <input
               type="range"
               name="exerciseNeeded"
@@ -53,10 +56,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
-          <br/>
+          <br />
           <label>
-          Considering the size of your new dog, where would you place your preference on a scale of 1 to 5?
-          <br/>
+            Considering the size of your new dog, where would you place your
+            preference on a scale of 1 to 5?
+            <br />
             <select name="size" value={formData.size} onChange={handleChange}>
               <option value="">Select size</option>
               <option value="Small">Small</option>
@@ -65,11 +69,12 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
               <option value="Giant">Giant</option>
             </select>
           </label>
-          <br/>
+          <br />
           <br />
           <label>
-            How comfortable are you with a dog that drools, on a scale of 1 to 5?
-            <br/>
+            How comfortable are you with a dog that drools, on a scale of 1 to
+            5?
+            <br />
             <input
               type="range"
               name="drooling"
@@ -80,10 +85,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
-          <br/>
+          <br />
           <label>
-          On a scale of 1 to 5, how much grooming are you willing to undertake for your new dog?
-          <br/>
+            On a scale of 1 to 5, how much grooming are you willing to undertake
+            for your new dog?
+            <br />
             <input
               type="range"
               name="grooming"
@@ -94,10 +100,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
-          <br/>
+          <br />
           <label>
-          Are you looking for a hypoallergenic dog? Please rate your preference on a scale of 1 to 5.
-          <br/>
+            Are you looking for a hypoallergenic dog? Please rate your
+            preference on a scale of 1 to 5.
+            <br />
             <input
               type="range"
               name="hypoallergenic"
@@ -107,11 +114,12 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
               max={5}
             />
           </label>
-          <br/>
+          <br />
           <br />
           <label>
-          How tolerant are you of barking in your new dog, on a scale of 1 to 5?
-          <br/>
+            How tolerant are you of barking in your new dog, on a scale of 1 to
+            5?
+            <br />
             <input
               type="range"
               name="barking"
@@ -121,11 +129,12 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
               max={5}
             />
           </label>
-          <br/>
+          <br />
           <br />
           <label>
-          Considering your desire for a protective dog, how would you rate your preference on a scale of 1 to 5?
-          <br/>
+            Considering your desire for a protective dog, how would you rate
+            your preference on a scale of 1 to 5?
+            <br />
             <input
               type="range"
               name="protectiveRating"
@@ -135,11 +144,12 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
               max={5}
             />
           </label>
-          <br/>
+          <br />
           <br />
           <label>
-          On a scale of 1 to 5, how important is it to you that your new dog is sociable?
-          <br/>
+            On a scale of 1 to 5, how important is it to you that your new dog
+            is sociable?
+            <br />
             <input
               type="range"
               name="sociability"
@@ -150,10 +160,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
-          <br/>
+          <br />
           <label>
-          How friendly would you like your new dog to be towards other dogs, on a scale of 1 to 5?
-          <br/>
+            How friendly would you like your new dog to be towards other dogs,
+            on a scale of 1 to 5?
+            <br />
             <input
               type="range"
               name="friendlinessToOtherDogs"
@@ -164,10 +175,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
-          <br/>
+          <br />
           <label>
-          When it comes to your new dog's friendliness towards children, where would you place your preference on a scale of 1 to 5?
-          <br/>
+            When it comes to your new dog's friendliness towards children, where
+            would you place your preference on a scale of 1 to 5?
+            <br />
             <input
               type="range"
               name="childFriendly"
@@ -178,10 +190,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
-          <br/>
+          <br />
           <label>
-          On a scale of 1 to 5, how independent would you like your new dog to be?
-          <br/>
+            On a scale of 1 to 5, how independent would you like your new dog to
+            be?
+            <br />
             <input
               type="range"
               name="independence"

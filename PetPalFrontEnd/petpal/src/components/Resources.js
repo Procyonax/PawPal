@@ -12,12 +12,12 @@ const Resources = () => {
           <img src={PawPrint} aria-hidden alt="paw-print-icon" />
         </h2>
         <h3>
-          <a
-            href="https://www.dogstrust.org.uk/"
-            rel="external"
-            
-          >
-            <img className="logos-larger" src="../images/dogs_trust_logo.jpg" alt="{dogs_trust_logo}"/>
+          <a href="https://www.dogstrust.org.uk/" rel="external">
+            <img
+              className="logos-larger"
+              src="../images/dogs_trust_logo.jpg"
+              alt="{dogs_trust_logo}"
+            />
           </a>
         </h3>
         <p>
@@ -31,7 +31,12 @@ const Resources = () => {
             rel="external"
             alt="{battersea_dog_and_cat_home_logo}"
           >
-            <img className="logos-larger" src="../images/battersea_logo.jpg" aria-hidden alt="battersea-logo"/>
+            <img
+              className="logos-larger"
+              src="../images/battersea_logo.jpg"
+              aria-hidden
+              alt="battersea-logo"
+            />
           </a>
         </h3>
         <p>
@@ -148,4 +153,3 @@ const Resources = () => {
 };
 
 export default Resources;
-
