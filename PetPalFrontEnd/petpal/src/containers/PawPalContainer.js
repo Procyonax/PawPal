@@ -286,7 +286,6 @@ const PawPalContainer = () => {
 
   return (
     <div>
-      <div>
         <Router>
           <NavBar />
           <Routes>
@@ -331,12 +330,12 @@ const PawPalContainer = () => {
             <Route path="/detailbreed/:id" element={<BreedDetailWrapper />} />
           </Routes>
         </Router>
-        <div className="footer">
+      
+      <footer className="footer">
           {dogFactsState.length > 0 ? (
             <Footer pawfacts={dogFactsState} />
           ) : null}
-        </div>
-      </div>
+      </footer>
     </div>
   );
 };
