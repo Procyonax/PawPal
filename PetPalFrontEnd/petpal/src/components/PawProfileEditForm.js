@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import "./styles.css/PawProfileForm.css"
 
 const PawProfileEditForm = ({pawProfile, breeds, handleUpdate}) => {
 
@@ -59,7 +60,7 @@ const PawProfileEditForm = ({pawProfile, breeds, handleUpdate}) => {
         <div>
           <form onSubmit={handleSubmit}>
             <p>
-              <input
+              <input className="input"
                 type="text"
                 placeholder={pawProfile.petName}
                 name="petName"
@@ -68,7 +69,7 @@ const PawProfileEditForm = ({pawProfile, breeds, handleUpdate}) => {
               ></input>
             </p>
             <p>
-              <input
+              <input className="input"
                 type="Date"
                 placeholder={pawProfile.petDob}
                 name="petDob"
@@ -77,7 +78,7 @@ const PawProfileEditForm = ({pawProfile, breeds, handleUpdate}) => {
               ></input>
             </p>
             <p>
-              <select
+              <select className="input"
                 name="breed"
                 onChange={handleBreed}
                 defaultValue={findBreedIndex()}>
@@ -85,7 +86,7 @@ const PawProfileEditForm = ({pawProfile, breeds, handleUpdate}) => {
               </select>
             </p>
             <p>
-              <input
+              <input className="input"
                 type="text"
                 placeholder={pawProfile.vetName}
                 name="vetName"
@@ -94,7 +95,7 @@ const PawProfileEditForm = ({pawProfile, breeds, handleUpdate}) => {
               ></input>
             </p>
             <p>
-              <input
+              <input className="input"
                 type="text"
                 placeholder={pawProfile.vetNumber}
                 name="vetNumber"
@@ -103,7 +104,7 @@ const PawProfileEditForm = ({pawProfile, breeds, handleUpdate}) => {
               ></input>
             </p>
             <p>
-              <input
+              <input className="input"
                 type="text"
                 placeholder={pawProfile.groomerName}
                 name="groomerName"
@@ -112,7 +113,7 @@ const PawProfileEditForm = ({pawProfile, breeds, handleUpdate}) => {
               ></input>
             </p>
             <p>
-              <input
+              <input className="input"
                 type="text"
                 placeholder={pawProfile.groomerNumber}
                 name="groomerNumber"
@@ -121,7 +122,7 @@ const PawProfileEditForm = ({pawProfile, breeds, handleUpdate}) => {
               ></input>
             </p>
             <p>
-              <input
+              <input className="input"
                 type="text"
                 placeholder={pawProfile.petImage}
                 name="petImage"
@@ -129,7 +130,7 @@ const PawProfileEditForm = ({pawProfile, breeds, handleUpdate}) => {
                 value={statePawProfile.petImage}
               ></input>
             </p>
-            <button type="submit">Save</button>
+            <button className="submit-button" type="submit">Update</button>
           </form>
         </div>
       );

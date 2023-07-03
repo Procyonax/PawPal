@@ -1,4 +1,5 @@
-.add-profile-button {
+.add-profile-button, .delete-button, .edit-button {
+    background-color: #fff;
     padding: 0.7rem 2rem;
     font-weight: 700;
     text-decoration: none;
@@ -7,8 +8,14 @@
     margin: 20px 0;
   }
   
-.add-profile-button:hover {
+.add-profile-button:hover, .edit-button:hover {
     background-color: #000;
+    color: #fff;
+  }
+
+  .delete-button:hover {
+    border-color: red;
+    background-color: red;
     color: #fff;
   }
 
@@ -30,21 +37,27 @@ li {
 .paw-profile-card-hover {
     box-shadow: inset 0 0 0 0 #ff8400;
     transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    padding: 25px;
+    padding: 10px;
     border-radius: 5px;
 }
 
 .paw-profile-card-hover:hover {
     box-shadow: inset 100vw 0 0 0 #ff8400;
     border-radius: 5px;
+    color: #fff;
 }
 
 .paw-profile-img {
     display: flex;
     margin: auto;
-    width: 75%;
+    width: 90%;
     border-radius: 5px;
     box-shadow: #8c8c8c -1px 15px 30px -12px;
+}
+
+.profile-detail-container {
+    display: flex;
+    flex-direction: column;
 }
 
 
