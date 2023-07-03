@@ -13,7 +13,8 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
       <div className='survey-container'>
         <form onSubmit={handleSubmit}>
           <label>
-            Trainability:
+          On a scale of 1 to 5, how important is it to you that your new dog is easily trainable?
+          <br/>
             <input
               type="range"
               name="trainability"
@@ -24,8 +25,10 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
+          <br/>
           <label>
-            Health Issues:
+          How concerned are you about potential health issues in your new dog, on a scale of 1 to 5?
+          <br/>
             <input
               type="range"
               name="healthIssues"
@@ -35,9 +38,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
               max={5}
             />
           </label>
+          <br/>
           <br />
           <label>
-            Exercise Needed:
+          When it comes to exercise needs, how would you rate your preference for your new dog on a scale of 1 to 5?
+          <br/>
             <input
               type="range"
               name="exerciseNeeded"
@@ -48,8 +53,10 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
+          <br/>
           <label>
-            Size:
+          Considering the size of your new dog, where would you place your preference on a scale of 1 to 5?
+          <br/>
             <select name="size" value={formData.size} onChange={handleChange}>
               <option value="">Select size</option>
               <option value="Small">Small</option>
@@ -58,9 +65,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
               <option value="Giant">Giant</option>
             </select>
           </label>
+          <br/>
           <br />
           <label>
-            Drooling:
+            How comfortable are you with a dog that drools, on a scale of 1 to 5?
+            <br/>
             <input
               type="range"
               name="drooling"
@@ -71,8 +80,10 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
+          <br/>
           <label>
-            Grooming:
+          On a scale of 1 to 5, how much grooming are you willing to undertake for your new dog?
+          <br/>
             <input
               type="range"
               name="grooming"
@@ -83,8 +94,10 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
+          <br/>
           <label>
-            Hypoallergenic:
+          Are you looking for a hypoallergenic dog? Please rate your preference on a scale of 1 to 5.
+          <br/>
             <input
               type="range"
               name="hypoallergenic"
@@ -94,9 +107,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
               max={5}
             />
           </label>
+          <br/>
           <br />
           <label>
-            Barking:
+          How tolerant are you of barking in your new dog, on a scale of 1 to 5?
+          <br/>
             <input
               type="range"
               name="barking"
@@ -106,9 +121,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
               max={5}
             />
           </label>
+          <br/>
           <br />
           <label>
-            Protective Rating:
+          Considering your desire for a protective dog, how would you rate your preference on a scale of 1 to 5?
+          <br/>
             <input
               type="range"
               name="protectiveRating"
@@ -118,9 +135,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
               max={5}
             />
           </label>
+          <br/>
           <br />
           <label>
-            Sociability:
+          On a scale of 1 to 5, how important is it to you that your new dog is sociable?
+          <br/>
             <input
               type="range"
               name="sociability"
@@ -131,8 +150,10 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
+          <br/>
           <label>
-            Friendliness to Other Dogs:
+          How friendly would you like your new dog to be towards other dogs, on a scale of 1 to 5?
+          <br/>
             <input
               type="range"
               name="friendlinessToOtherDogs"
@@ -143,8 +164,10 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
+          <br/>
           <label>
-            Child Friendly:
+          When it comes to your new dog's friendliness towards children, where would you place your preference on a scale of 1 to 5?
+          <br/>
             <input
               type="range"
               name="childFriendly"
@@ -155,9 +178,10 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             />
           </label>
           <br />
-
+          <br/>
           <label>
-            Independence:
+          On a scale of 1 to 5, how independent would you like your new dog to be?
+          <br/>
             <input
               type="range"
               name="independence"

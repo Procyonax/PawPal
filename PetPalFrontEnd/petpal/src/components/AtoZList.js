@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import {Link} from "react-router-dom"
 import BreedCard from "./BreedCard";
 import "./AtoZList.css";
 import PawPrint from "../icons/pawprint.svg";
@@ -20,9 +19,9 @@ const AtoZList = ({ breeds }) => {
   return (
     <div>
       <h1>
-      <img src={PawPrint} aria-hidden />
+      <img src={PawPrint} aria-hidden  alt="paw-print-icon"/>
         AtoZ of Dogs
-      <img src={PawPrint} aria-hidden />
+      <img src={PawPrint} aria-hidden alt="paw-print-icon"/>
       </h1>
       <input
         type="text"
