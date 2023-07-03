@@ -1,7 +1,9 @@
 .breed-card-image{
     padding: 25px;
     width: 100%;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    border-radius: 5px;
+    box-shadow: #8c8c8c -1px 15px 30px -12px;
 }
  
 .hover-links {
