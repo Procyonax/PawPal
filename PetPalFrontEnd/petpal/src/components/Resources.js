@@ -15,7 +15,7 @@ const Resources = () => {
           <a
             href="https://www.dogstrust.org.uk/"
             target="_blank"
-            
+            rel="noopener noreferrer"
           >
             <img className="logos-larger" src="../images/dogs_trust_logo.jpg" alt="{dogs_trust_logo}"/>
 
@@ -31,6 +31,7 @@ const Resources = () => {
             href="https://www.battersea.org.uk/"
             target="_blank"
             alt="{battersea_dog_and_cat_home_logo}"
+            rel="noopener noreferrer"
           >
             <img
               className="logos-larger"
@@ -46,7 +47,7 @@ const Resources = () => {
           quirks so we can find them a new home that`s just right for them.
         </p>
         <h3>
-          <a href="https://www.scottishspca.org/" target="_blank">
+          <a href="https://www.scottishspca.org/" target="_blank" rel="noopener noreferrer">
             <img
               className="logo-sspca"
               src="../images/spca_logo.jpg"
@@ -62,7 +63,7 @@ const Resources = () => {
           We are Scotland's animal champions.
         </p>
         <h3>
-          <a href="https://www.rspca.org.uk/home" target="_blank">
+          <a href="https://www.rspca.org.uk/home" target="_blank" rel="noopener noreferrer">
             <img
               className="logos"
               src="../images/rspca_logo.jpg"
@@ -76,7 +77,7 @@ const Resources = () => {
           fundraising and donations to carry out our vital work.
         </p>
         <h3>
-          <a href="https://www.bluecross.org.uk/" target="_blank">
+          <a href="https://www.bluecross.org.uk/" target="_blank" rel="noopener noreferrer">
             <img
               className="logos"
               src="../images/blue_cross_logo.jpg"
@@ -100,6 +101,7 @@ const Resources = () => {
           <a
             href="https://findavet.rcvs.org.uk/home/?&&type=rfst&set=true#cookie-widget"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <img
               className="logos-larger"
@@ -123,7 +125,7 @@ const Resources = () => {
           <img src={PawPrint} aria-hidden alt="paw-print-icon" />
         </h2>
         <h3>
-          <a href="https://www.rover.com/" target="_blank">
+          <a href="https://www.rover.com/" target="_blank" rel="noopener noreferrer">
             <img
               className="logos"
               src="../images/rover_logo.jpg"
@@ -136,7 +138,7 @@ const Resources = () => {
           treat your pets like family.
         </p>
         <h3>
-          <a href="https://www.trustedhousesitters.com/" target="_blank">
+          <a href="https://www.trustedhousesitters.com/" target="_blank" rel="noopener noreferrer">
             <img
               className="logos"
               src="../images/trusted_house_sitters_logo.jpg"
