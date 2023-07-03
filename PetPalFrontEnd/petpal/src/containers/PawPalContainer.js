@@ -22,19 +22,19 @@ import Footer from "../components/Footer";
 const PawPalContainer = ({}) => {
   const [formData, setFormData] = useState({
     name: "",
-    trainability: "",
-    healthIssues: "",
-    exerciseNeeded: "",
+    trainability: "3",
+    healthIssues: "3",
+    exerciseNeeded: "3",
     size: "",
-    drooling: "",
-    grooming: "",
-    hypoallergenic: "",
-    barking: "",
-    protectiveRating: "",
-    sociability: "",
-    friendlinessToOtherDogs: "",
-    childFriendly: "",
-    independence: "",
+    drooling: "3",
+    grooming: "3",
+    hypoallergenic: "3",
+    barking: "3",
+    protectiveRating: "3",
+    sociability: "3",
+    friendlinessToOtherDogs: "3",
+    childFriendly: "3",
+    independence: "3",
   });
 
   const [nearestMatches, setNearestMatches] = useState([]);
