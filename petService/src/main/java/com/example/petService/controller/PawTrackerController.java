@@ -25,6 +25,11 @@ public class PawTrackerController {
         return new ResponseEntity(pawTrackerRepository.findById(id), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/trackers/pawprofile/{id}")
+    public ResponseEntity getTrackerByPawProfile(@PathVariable Long id){
+        return new ResponseEntity(pawTrackerRepository.findByProfileId(id), HttpStatus.OK);
+    }
+
     @PostMapping(value = "/trackers")
     public ResponseEntity<PawTracker> postTracker(@RequestBody PawTracker tracker){
         pawTrackerRepository.save(tracker);
