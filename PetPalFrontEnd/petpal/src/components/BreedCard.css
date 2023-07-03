@@ -1,33 +1,39 @@
-.breed-card-image {
-  padding: 25px;
-  width: 100%;
-  /* border-radius: 50%; */
-  border-radius: 5px;
-  box-shadow: #8c8c8c -1px 15px 30px -12px;
-}
 
-.hover-links {
+.breed-card-container{
+  padding: 10px;
   box-shadow: inset 0 0 0 0 #ff8400;
-  color: #ff8400;
-  padding: 0 0.25rem;
-  margin: 0 -0.25rem;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  width: 80%;
+
 }
 
-.hover-links:hover {
-  color: #fff;
-  box-shadow: inset 200px 0 0 0 #ff8400;
+.breed-card-image{
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: #8c8c8c -1px 15px 30px -12px;
 }
 
-/* Presentational styles */
 .hover-links {
-  color: #ff8400;
-  font-family: "Poppins", sans-serif;
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 1.5;
-  text-decoration: none;
-}
+    
+    color: #ff8400;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+  }
+
+  .breed-card-container:hover{
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #ff8400;;
+  }
+  
+  .hover-links {
+    color: #ff8400;
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+  }
+
 
 .breed-name {
   color: black;
@@ -37,8 +43,7 @@
   text-decoration: none;
 }
 
-/* body {
-    display: grid;
-    height: 100vh;
-    place-items: center;
-  } */
+  .breed-link{
+    text-decoration: none;
+  }
+  

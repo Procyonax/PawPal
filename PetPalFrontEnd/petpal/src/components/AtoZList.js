@@ -27,10 +27,12 @@ const AtoZList = ({ breeds }) => {
         <img src={PawPrint} aria-hidden alt="paw-print-icon" />
       </h1>
       <input
+        className="search-bar"
         type="text"
         placeholder="Search for a dog breed"
         onChange={(event) => setSearchTerm(event.target.value)}
       />
+
       <div className="atoz-list">{dogBreedListItems}</div>
     </div>
   );
