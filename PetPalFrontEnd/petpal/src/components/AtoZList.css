@@ -22,3 +22,12 @@
 .atoz-list-breed > div {
     flex-grow: 1;
 }
+
+.search-bar{
+    padding: 0.3rem 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 0.3rem solid #000;
+    border-radius: 3rem;
+    margin: 5px 0;
+}
