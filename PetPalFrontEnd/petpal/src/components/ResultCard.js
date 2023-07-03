@@ -1,5 +1,5 @@
 import React from "react";
-import "./Result.css";
+import "./styles.css/Result.css";
 import "../App.css";
 
 const ResultCard = ({ breed }) => {
