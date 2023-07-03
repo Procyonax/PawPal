@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import './Survey.css'
 
 const Survey = ({ handleChange, handleSubmit, formData }) => {
   const handlePost = () => {
@@ -9,17 +10,16 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
 
   return (
     <div>
-      <div>
-        <h1>Breed Form</h1>
+      <div className='survey-container'>
         <form onSubmit={handleSubmit}>
           <label>
             Trainability:
             <input
-              type="number"
+              type="range"
               name="trainability"
               value={formData.trainability}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
@@ -27,11 +27,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           <label>
             Health Issues:
             <input
-              type="number"
+              type="range"
               name="healthIssues"
               value={formData.healthIssues}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
@@ -39,11 +39,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           <label>
             Exercise Needed:
             <input
-              type="number"
+              type="range"
               name="exerciseNeeded"
               value={formData.exerciseNeeded}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
@@ -62,11 +62,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           <label>
             Drooling:
             <input
-              type="number"
+              type="range"
               name="drooling"
               value={formData.drooling}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
@@ -74,11 +74,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           <label>
             Grooming:
             <input
-              type="number"
+              type="range"
               name="grooming"
               value={formData.grooming}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
@@ -86,11 +86,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           <label>
             Hypoallergenic:
             <input
-              type="number"
+              type="range"
               name="hypoallergenic"
               value={formData.hypoallergenic}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
@@ -98,11 +98,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           <label>
             Barking:
             <input
-              type="number"
+              type="range"
               name="barking"
               value={formData.barking}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
@@ -110,11 +110,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           <label>
             Protective Rating:
             <input
-              type="number"
+              type="range"
               name="protectiveRating"
               value={formData.protectiveRating}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
@@ -122,11 +122,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           <label>
             Sociability:
             <input
-              type="number"
+              type="range"
               name="sociability"
               value={formData.sociability}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
@@ -134,11 +134,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           <label>
             Friendliness to Other Dogs:
             <input
-              type="number"
+              type="range"
               name="friendlinessToOtherDogs"
               value={formData.friendlinessToOtherDogs}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
@@ -146,11 +146,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           <label>
             Child Friendly:
             <input
-              type="number"
+              type="range"
               name="childFriendly"
               value={formData.childFriendly}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
@@ -159,11 +159,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           <label>
             Independence:
             <input
-              type="number"
+              type="range"
               name="independence"
               value={formData.independence}
               onChange={handleChange}
-              min={0}
+              min={1}
               max={5}
             />
           </label>
