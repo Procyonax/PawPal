@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import "./styles.css/Navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
@@ -12,8 +11,6 @@ const NavBar = () => {
 
   return (
     <div>
-      {/* IconContext changes icons from default black to white, as background is black */}
-      <IconContext.Provider value={{ color: "#EFD231" }}>
         <nav className="navbar">
           <div className="navbar-container">
             {/* Logo routes to home and closes mobile menu when clicked */}
@@ -26,6 +23,7 @@ const NavBar = () => {
               />
             </Link>
             {/* Switches burger between bars when inactive and cross when active */}
+            <div className="menu-links">
             <div className="menu-icon" onClick={handleClick}>
               {click ? (
                 <FaTimes style={{ color: "#ff9200" }} />
@@ -79,9 +77,10 @@ const NavBar = () => {
                 </NavLink>
               </li>
             </ul>
+            </div>
           </div>
         </nav>
-      </IconContext.Provider>
+      <br/>
     </div>
   );
 };

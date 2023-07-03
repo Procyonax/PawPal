@@ -16,6 +16,7 @@ import Footer from "../components/Footer";
 import PawProfileList from "../components/PawProfileList";
 import PawProfileDetail from "../components/PawProfileDetail";
 import PawProfileForm from "../components/PawProfileForm";
+import PawProfileEditForm from "../components/PawProfileEditForm";
 import Request from "../helpers/request";
 
 const PawPalContainer = () => {
@@ -77,6 +78,20 @@ const PawPalContainer = () => {
       window.location = "/pawprofiles";
     });
   };
+
+  const handleUpdate = (pawProfile) => {
+    const request = new Request()
+    request.Patch("/api/profiles/" + pawProfile.id, pawProfile)
+    .then(() => {
+      window.location = "/pawprofiles/" + pawProfile.id
+    })
+  }
+
+  const PawProfileEditWrapper =() =>{
+    const {id} = useParams()
+    let foundPawProfile = findPawProfileById(id)
+    return <PawProfileEditForm pawProfile={foundPawProfile} breeds={breedState} handleUpdate={handleUpdate} />
+  }
 
   const PawProfileDetailWrapper = () => {
     // extract the id from the url
@@ -286,7 +301,6 @@ const PawPalContainer = () => {
 
   return (
     <div>
-      <div>
         <Router>
           <NavBar />
           <Routes>
@@ -321,6 +335,10 @@ const PawPalContainer = () => {
                 <PawProfileForm breeds={breedState} onCreate={handlePost} />
               }
             />
+            <Route
+              path="/pawprofiles/edit/:id"
+              element={<PawProfileEditWrapper />} />
+
             <Route path="/resources" element={<Resources />} />
             <Route
               path="/atozlist"
@@ -331,12 +349,12 @@ const PawPalContainer = () => {
             <Route path="/detailbreed/:id" element={<BreedDetailWrapper />} />
           </Routes>
         </Router>
-        <div className="footer">
+      
+      <footer className="footer">
           {dogFactsState.length > 0 ? (
             <Footer pawfacts={dogFactsState} />
           ) : null}
-        </div>
-      </div>
+      </footer>
     </div>
   );
 };

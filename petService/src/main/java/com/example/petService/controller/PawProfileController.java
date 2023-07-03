@@ -37,7 +37,7 @@ public class PawProfileController {
         return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
-    @PatchMapping(value = "/profile/{id}")
+    @PatchMapping(value = "/profiles/{id}")
     public ResponseEntity<PawProfile> updateProfile(@RequestBody PawProfile pawProfile){
         pawProfileRepository.save(pawProfile);
         return new ResponseEntity<>(pawProfile, HttpStatus.OK);
