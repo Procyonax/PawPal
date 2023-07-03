@@ -56,6 +56,17 @@ const NavBar = () => {
               </li>
               <li className="nav-item">
                 <NavLink
+                  to="/pawprofiles"
+                  className={({ isActive }) =>
+                    "nav-links" + (isActive ? " activated" : "")
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Paw Profiles
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
                   to="/atozlist"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
