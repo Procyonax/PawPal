@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Survey.css";
+import "./styles.css/Survey.css";
 
 const Survey = ({ handleChange, handleSubmit, formData }) => {
   const handlePost = () => {
@@ -9,7 +9,6 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
   };
 
   return (
-    <div>
       <div className="survey-container">
         <form onSubmit={handleSubmit}>
           <label>
@@ -210,7 +209,6 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </Link>
         </form>
       </div>
-    </div>
   );
 };
 

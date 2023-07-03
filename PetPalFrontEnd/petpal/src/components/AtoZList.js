@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BreedCard from "./BreedCard";
-import "./AtoZList.css";
+import "./styles.css/AtoZList.css";
 import PawPrint from "../icons/pawprint.svg";
 
 const AtoZList = ({ breeds }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./DetailBreed.css";
+import "./styles.css/DetailBreed.css";
 import PawPrint from "../icons/pawprint.svg";
 
 const DetailBreed = ({ breed }) => {
