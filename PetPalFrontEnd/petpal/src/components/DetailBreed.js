@@ -33,7 +33,6 @@ const DetailBreed = ({ breed }) => {
         <li>How child friendly I am: <b>{breed.childFriendly}</b></li>
         <li>How independent I am: <b>{breed.independence}</b></li>
       </ul>
-      <p className="scaling-message">* 1 being not fine with and 5 being very fine with *</p>
     </div>
       </div>
   );
