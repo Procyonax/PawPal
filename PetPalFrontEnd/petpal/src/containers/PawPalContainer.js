@@ -41,6 +41,7 @@ const PawPalContainer = () => {
   const [breedState, setBreedState] = useState([]);
   const [reversedArray, setReversedArray] = useState([]);
   const [dogFactsState, setDogFactsState] = useState([]);
+  // eslint-disable-next-line
   const [selectedBreed, setSelectedBreed] = useState(null);
   const [pawProfiles, setPawProfiles] = useState([]);
   // const [pawTrackers, setPawTrackers] = useState([]);

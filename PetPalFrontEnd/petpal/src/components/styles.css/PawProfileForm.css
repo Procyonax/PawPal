@@ -9,7 +9,7 @@
     box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 
-.save-button, .submit-button {
+.save-button, .submit-button, .next-button, .previous-button {
     background-color: #fff;
     padding: 0.3rem 2rem;
     font-weight: 700;
@@ -19,7 +19,7 @@
     margin: 5px 0;
 }
 
-.save-button:hover, .submit-button:hover {
+.save-button:hover, .submit-button:hover , .next-button:hover, .previous-button:hover{
     background-color: #000;
     color: #fff;
 }

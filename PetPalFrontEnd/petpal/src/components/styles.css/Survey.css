@@ -1,4 +1,4 @@
-.survey-container {
+/* .survey-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,6 +19,7 @@
 
 .slider {
   width: 100%;
+  color: orange;
 }
 
 .buttons {
@@ -29,4 +30,109 @@
 
 .button {
   padding: 10px 20px;
+}
+
+.size-button{
+  background-color: #fff;
+  padding: 0.3rem 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 0.3rem solid #000;
+  border-radius: 3rem;
+  margin: 5px 0;
+}
+
+.submit-button{
+  background-color: #fff;
+  padding: 0.3rem 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 0.3rem solid #000;
+  border-radius: 3rem;
+  margin: 5px 0;
+} */
+
+.survey-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh;
+}
+
+.slider-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.slider {
+  width: 100%;
+  color: orange;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #fff;
+  padding: 0.3rem 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 0.3rem solid #000;
+  border-radius: 3rem;
+  margin: 5px 0;
+}
+
+.size-button {
+  background-color: #fff;
+  padding: 0.3rem 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 0.3rem solid #000;
+  border-radius: 3rem;
+  margin: 5px 0;
+}
+
+.ratings-options{
+  text-align: center;
+}
+
+.submit-button {
+  background-color: #fff;
+  padding: 0.3rem 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 0.3rem solid #000;
+  border-radius: 3rem;
+  margin: 5px 0;
+}
+
+/* Hide all questions initially */
+.survey-container > div {
+  display: none;
+}
+
+/* Show current question */
+.survey-container > div:first-of-type {
+  display: block;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 23px;
+  height: 25px;
+  border: 0;
+  background: url('../../icons/pawprint.svg');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 25px;
+  border: 0;
+  background: url('../../icons/pawprint.svg');
+  cursor: pointer;
 }
