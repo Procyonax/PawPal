@@ -2,6 +2,10 @@
   max-width: 600px;
   margin: 0 auto;
 }
+
+.dog-image-container{
+  margin-bottom: 20px;
+}
 .dog-image-detail {
   width: 70%;
   border-radius: 2px;
@@ -12,6 +16,7 @@
   list-style: none;
   text-align: start;
   padding-left: 8rem;
+  font-family: Belanosima;
 }
 
 .detail-breed-name {

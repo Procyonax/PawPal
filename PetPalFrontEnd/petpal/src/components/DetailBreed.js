@@ -2,15 +2,19 @@ import React from "react";
 import "./styles.css/DetailBreed.css";
 import PawPrint from "../icons/pawprint.svg";
 
+
+
 const DetailBreed = ({ breed }) => {
   console.log(breed);
   return (
     <div className="detail-breed">
+      <div className="dog-image-container">
       <img
         className="dog-image-detail"
         src={`../images/${breed.image}`}
         alt="dog"
       />
+      </div>
       <div className="fancy-border">
         <h2 className="detail-breed-name">{breed.name}</h2>
         <p className="detail-description">{breed.description}</p>
@@ -60,9 +64,6 @@ const DetailBreed = ({ breed }) => {
             How independent I am: <b>{breed.independence}</b>
           </li>
         </ul>
-        <p className="scaling-message">
-          * 1 being not fine with and 5 being very fine with *
-        </p>
       </div>
     </div>
   );
