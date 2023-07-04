@@ -5,30 +5,40 @@ import "./styles.css/Survey.css";
 const Survey = ({ handleChange, handleSubmit, formData }) => {
   const handlePost = () => {
     handleSubmit();
-    // return <Link to="/result"></Link>
   };
 
   return (
     <div className="survey-container">
-      <form onSubmit={handleSubmit}>
+      <form className="form-container" onSubmit={handleSubmit}>
         <label>
-          On a scale of 1 to 5, how important is it to you that your new dog is
-          easily trainable?
+          How trainable would you like your dog to be?
           <br />
-          <input
+          <input className="slider"
             type="range"
             name="trainability"
             value={formData.trainability}
             onChange={handleChange}
             min={1}
             max={5}
+            list="trainability-values"
           />
         </label>
-        <br />
+        <datalist id="trainabilty-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>
+        <div className="range-container">
+          <p>easily</p>
+          <p>challenging</p>
+        </div>
         <br />
         <label>
-          How concerned are you about potential health issues in your new dog,
-          on a scale of 1 to 5?
+          How concerned are you about potential health issues in your new dog?
           <br />
           <input
             type="range"
@@ -37,13 +47,26 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
+            list="health-values"
           />
         </label>
-        <br />
+        <datalist id="health-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>  
+        <div className="range-container">
+          <p>concerned</p>
+          <p>unconcerned</p>
+        </div>      
         <br />
         <label>
           When it comes to exercise needs, how would you rate your preference
-          for your new dog on a scale of 1 to 5?
+          for your new dog?
           <br />
           <input
             type="range"
@@ -52,15 +75,27 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
+            list="excercise-values"
           />
         </label>
-        <br />
+        <datalist id="excercise-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>  
+        <div className="range-container">
+          <p>small</p>
+          <p>lots</p>
+        </div>  
         <br />
         <label>
-          Considering the size of your new dog, where would you place your
-          preference on a scale of 1 to 5?
+          What size of dog would you  be comfortable with?
           <br />
-          <select name="size" value={formData.size} onChange={handleChange}>
+          <select className="size-dropdown" name="size" value={formData.size} onChange={handleChange}>
             <option value="">Select size</option>
             <option value="Small">Small</option>
             <option value="Medium">Medium</option>
@@ -69,9 +104,9 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </select>
         </label>
         <br />
-        <br />
+        <br/>
         <label>
-          How comfortable are you with a dog that drools, on a scale of 1 to 5?
+          How comfortable are you with a dog that drools?
           <br />
           <input
             type="range"
@@ -80,12 +115,25 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
+            list="drooling-values"
           />
         </label>
-        <br />
+        <datalist id="drooling-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>  
+        <div className="range-container">
+          <p>uncomfortable</p>
+          <p>comfortable</p>
+        </div>  
         <br />
         <label>
-          On a scale of 1 to 5, how much grooming are you willing to undertake
+          How much grooming are you willing to undertake
           for your new dog?
           <br />
           <input
@@ -95,13 +143,25 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
+            list="grooming-values"
           />
         </label>
-        <br />
-        <br />
+        <datalist id="grooming-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>  
+        <div className="range-container">
+          <p>less</p>
+          <p>lots</p>
+        </div>         
+         <br />
         <label>
-          Are you looking for a hypoallergenic dog? Please rate your preference
-          on a scale of 1 to 5.
+          How hypoallergenic would you need the dog to be?
           <br />
           <input
             type="range"
@@ -110,12 +170,25 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
+            list="hypoallergenic-values"
           />
         </label>
-        <br />
+        <datalist id="hypoallergenic-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>  
+        <div className="range-container">
+          <p>very</p>
+          <p>not</p>
+        </div>          
         <br />
         <label>
-          How tolerant are you of barking in your new dog, on a scale of 1 to 5?
+          Do you mind your dog barking?
           <br />
           <input
             type="range"
@@ -124,13 +197,25 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
+            list="barking-values"
           />
+          <datalist id="barking-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>
+        <div className="range-container">
+          <p>yes</p>
+          <p>no</p>
+        </div>
         </label>
         <br />
-        <br />
         <label>
-          Considering your desire for a protective dog, how would you rate your
-          preference on a scale of 1 to 5?
+          How protective would you like your dog to be?
           <br />
           <input
             type="range"
@@ -139,13 +224,26 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
+            list="protective-values"
+            
           />
+          <datalist id="protective-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>
+        <div className="range-container">
+          <p>not at all</p>
+          <p>extremely</p>
+        </div>
         </label>
         <br />
-        <br />
         <label>
-          On a scale of 1 to 5, how important is it to you that your new dog is
-          sociable?
+          How sociable would you like your dog to be with other humans?
           <br />
           <input
             type="range"
@@ -154,13 +252,25 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
+            list="sociability-values"
           />
+          <datalist id="sociability-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>
+        <div className="range-container">
+          <p>just with me</p>
+          <p>extremely</p>
+        </div>
         </label>
         <br />
-        <br />
         <label>
-          How friendly would you like your new dog to be towards other dogs, on
-          a scale of 1 to 5?
+          Do you need your dog to get on with other dogs?
           <br />
           <input
             type="range"
@@ -169,13 +279,25 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
+            list="friendliness-to-other-dogs-values"
           />
+          <datalist id="friendliness-to-other-dogs-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>
+        <div className="range-container">
+          <p>no</p>
+          <p>yes</p>
+        </div>
         </label>
         <br />
-        <br />
         <label>
-          When it comes to your new dog's friendliness towards children, where
-          would you place your preference on a scale of 1 to 5?
+          How necessary is it for the dog to get on with children?
           <br />
           <input
             type="range"
@@ -184,13 +306,25 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
+            list="child-friendly-values"
           />
         </label>
-        <br />
+        <datalist id="child-friendly-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>
+        <div className="range-container">
+          <p>unnecessary</p>
+          <p>very</p>
+        </div>
         <br />
         <label>
-          On a scale of 1 to 5, how independent would you like your new dog to
-          be?
+          How independent would you like your dog to be?
           <br />
           <input
             type="range"
@@ -199,11 +333,25 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
+            list="independence-values"
           />
         </label>
+        <datalist id="independence-values">
+          <div className="options-container">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+          </div>
+        </datalist>
+        <div className="range-container">
+          <p>dependent</p>
+          <p>independent</p>
+        </div>
         <br />
         <Link to="/result">
-          <button onClick={handlePost}>Submit</button>
+          <button className="submit-button" onClick={handlePost}>Submit</button>
         </Link>
       </form>
     </div>

@@ -6,3 +6,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+p, label {
+  font-family: Belanosima;
+}
