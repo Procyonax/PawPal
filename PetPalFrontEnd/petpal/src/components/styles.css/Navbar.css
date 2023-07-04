@@ -6,7 +6,7 @@
 
 .navbar {
   background: #19191a;
-  height: 130px;
+  height: 20vh;
   display: flex;
   font-size: 1.2rem;
   position: relative;
@@ -16,22 +16,8 @@
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
-  height: 0px;
+  flex-direction: row;
   align-items: center;
-}
-
-.container {
-  z-index: 1;
-  width: 100%;
-  max-width: 1300px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 .navbar-logo {
@@ -47,19 +33,13 @@
 
 .navbar-icon {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
   padding-left: 10px;
-  size: auto;
   margin-top: 0;
 }
 
 .nav-menu {
   display: flex;
-  align-items: right;
   list-style: none;
-  text-align: right;
-  justify-content: flex-end;
   font-family: Belanosima;
 }
 
@@ -76,8 +56,6 @@
 .nav-links {
   color: #fff;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
   text-decoration: none;
   margin-top: 20px;
   padding: 0.5rem 0.5rem;
@@ -101,6 +79,10 @@
     position: relative;
   }
 
+  .navbar {
+    height: 25vh;
+  }
+
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -108,15 +90,16 @@
     position: absolute;
     top: 80px;
     visibility: hidden;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
+    padding: 0;
+    height: 100vh;
   }
 
   .nav-menu.active {
     background: #19191a;
-    margin-top: -15%;
-    left: 0;
+    margin-top: -20%;
     visibility: visible;
-    transition: all 0.6s ease;
+    transition: all 0.5s ease-in-out;
     z-index: 1;
   }
 
