@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PawProfile from "./PawProfile";
-import "./styles.css/PawProfile.css"
+import "./styles.css/PawProfile.css";
 
 const PawProfileDetail = ({ pawProfile, handleDelete }) => {
   if (!pawProfile) {
@@ -12,14 +12,17 @@ const PawProfileDetail = ({ pawProfile, handleDelete }) => {
   };
 
   return (
-
     <div className="profile-detail-container">
       <PawProfile pawProfile={pawProfile} />
       <div className="buttons-container">
-      <Link to={"/pawprofiles/edit/" + pawProfile.id}>
-        <button className="edit-button">Edit</button>
-      </Link>
-        <a href=""><button className="delete-button" onClick={onDelete}>Delete</button></a>
+        <Link to={"/pawprofiles/edit/" + pawProfile.id}>
+          <button className="edit-button">Edit</button>
+        </Link>
+        <a href="/#">
+          <button className="delete-button" onClick={onDelete}>
+            Delete
+          </button>
+        </a>
       </div>
     </div>
   );

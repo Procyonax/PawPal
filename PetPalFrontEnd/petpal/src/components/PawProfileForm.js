@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles.css/PawProfileForm.css"
+import "./styles.css/PawProfileForm.css";
 
 const PawProfileForm = ({ breeds, onCreate }) => {
   const [statePawProfile, setStatePawProfile] = useState({
@@ -49,7 +49,8 @@ const PawProfileForm = ({ breeds, onCreate }) => {
     <div className="new-profile-form-container">
       <form onSubmit={handleSubmit}>
         <p>
-          <input className="input"
+          <input
+            className="input"
             type="text"
             placeholder="Pet Name"
             name="petName"
@@ -59,7 +60,8 @@ const PawProfileForm = ({ breeds, onCreate }) => {
           ></input>
         </p>
         <p>
-          <input className="input"
+          <input
+            className="input"
             type="Date"
             placeholder="Pet DOB"
             name="petDob"
@@ -68,7 +70,8 @@ const PawProfileForm = ({ breeds, onCreate }) => {
           ></input>
         </p>
         <p>
-          <select className="input"
+          <select
+            className="input"
             name="breed"
             onChange={handleBreed}
             defaultValue="select-breed"
@@ -80,7 +83,8 @@ const PawProfileForm = ({ breeds, onCreate }) => {
           </select>
         </p>
         <p>
-          <input className="input"
+          <input
+            className="input"
             type="text"
             placeholder="Vet Name"
             name="vetName"
@@ -89,7 +93,8 @@ const PawProfileForm = ({ breeds, onCreate }) => {
           ></input>
         </p>
         <p>
-          <input className="input"
+          <input
+            className="input"
             type="text"
             placeholder="Vet Number"
             name="vetNumber"
@@ -98,7 +103,8 @@ const PawProfileForm = ({ breeds, onCreate }) => {
           ></input>
         </p>
         <p>
-          <input className="input"
+          <input
+            className="input"
             type="text"
             placeholder="Groomer name"
             name="groomerName"
@@ -107,7 +113,8 @@ const PawProfileForm = ({ breeds, onCreate }) => {
           ></input>
         </p>
         <p>
-          <input className="input"
+          <input
+            className="input"
             type="text"
             placeholder="Groomer number"
             name="groomerNumber"
@@ -116,7 +123,8 @@ const PawProfileForm = ({ breeds, onCreate }) => {
           ></input>
         </p>
         <p>
-          <input className="input"
+          <input
+            className="input"
             type="text"
             // accept="image/png, image/jpeg, image/jpg, image/svg"
             placeholder="Pet Image"
@@ -125,7 +133,9 @@ const PawProfileForm = ({ breeds, onCreate }) => {
             value={statePawProfile.petImage}
           ></input>
         </p>
-        <button className="save-button" type="submit">Save</button>
+        <button className="save-button" type="submit">
+          Save
+        </button>
       </form>
     </div>
   );

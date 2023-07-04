@@ -1,8 +1,8 @@
 import React from "react";
 import PawProfile from "./PawProfile";
 import { Link } from "react-router-dom";
-import "../App.css"
-import "./styles.css/PawProfile.css"
+import "../App.css";
+import "./styles.css/PawProfile.css";
 
 const PawProfileList = ({ pawProfiles }) => {
   const pawProfileElements = pawProfiles.map((pawProfile, index) => {
@@ -21,9 +21,7 @@ const PawProfileList = ({ pawProfiles }) => {
       <Link to="/pawprofiles/new">
         <button className="add-profile-button">+ Profile</button>
       </Link>
-      <div className="paw-profile-card-container">
-      {pawProfileElements}
-      </div>
+      <div className="paw-profile-card-container">{pawProfileElements}</div>
     </div>
   );
 };

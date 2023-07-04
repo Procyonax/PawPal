@@ -11,19 +11,19 @@ const NavBar = () => {
 
   return (
     <div>
-        <nav className="navbar">
-          <div className="navbar-container">
-            {/* Logo routes to home and closes mobile menu when clicked */}
-            <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-              <img
-                src="/25Logo.webp"
-                className="navbar-icon"
-                aria-hidden
-                alt="paw-pal-icon"
-              />
-            </Link>
-            {/* Switches burger between bars when inactive and cross when active */}
-            <div className="menu-links">
+      <nav className="navbar">
+        <div className="navbar-container">
+          {/* Logo routes to home and closes mobile menu when clicked */}
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            <img
+              src="/25Logo.webp"
+              className="navbar-icon"
+              aria-hidden
+              alt="paw-pal-icon"
+            />
+          </Link>
+          {/* Switches burger between bars when inactive and cross when active */}
+          <div className="menu-links">
             <div className="menu-icon" onClick={handleClick}>
               {click ? (
                 <FaTimes style={{ color: "#ff9200" }} />
@@ -88,10 +88,10 @@ const NavBar = () => {
                 </NavLink>
               </li>
             </ul>
-            </div>
           </div>
-        </nav>
-      <br/>
+        </div>
+      </nav>
+      <br />
     </div>
   );
 };

@@ -1,5 +1,4 @@
-
-.breed-card-container{
+.breed-card-container {
   padding: 10px;
   box-shadow: inset 0 0 0 0 #ff8400;
   transition: color .5s linear, box-shadow .5s linear;
@@ -7,17 +6,11 @@
   border-radius: 5px;
 }
 
-.breed-card-image{
-    width: 90%;
-    border-radius: 5px;
-    box-shadow: #8c8c8c -1px 15px 30px -12px;
+.breed-card-image {
+  width: 90%;
+  border-radius: 5px;
+  box-shadow: #8c8c8c -1px 15px 30px -12px;
 }
-
-.hover-links {
-    color: #ff8400;
-    padding: 0 .25rem;
-    margin: 0 -.25rem;
-  }
 
   .breed-card-container:hover{
     color: #fff;
@@ -32,8 +25,9 @@
     font-weight: 700;
     line-height: 1.5;
     text-decoration: none;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
   }
-
 
 .breed-name {
   color: black;
@@ -43,7 +37,6 @@
   text-decoration: none;
 }
 
-  .breed-link{
-    text-decoration: none;
-  }
-  
+.breed-link {
+  text-decoration: none;
+}
