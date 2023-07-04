@@ -12,12 +12,15 @@ const PawProfileDetail = ({ pawProfile, handleDelete }) => {
   };
 
   return (
+
     <div className="profile-detail-container">
       <PawProfile pawProfile={pawProfile} />
+      <div className="buttons-container">
       <Link to={"/pawprofiles/edit/" + pawProfile.id}>
-        <button className="edit-button">Edit {pawProfile.petName}</button>
+        <button className="edit-button">Edit</button>
       </Link>
-        <a><button className="delete-button" onClick={onDelete}>Delete {pawProfile.petName}</button></a>
+        <a href=""><button className="delete-button" onClick={onDelete}>Delete</button></a>
+      </div>
     </div>
   );
 };

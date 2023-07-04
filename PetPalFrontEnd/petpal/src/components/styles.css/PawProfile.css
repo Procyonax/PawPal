@@ -11,13 +11,21 @@
 .add-profile-button:hover, .edit-button:hover {
     background-color: #000;
     color: #fff;
-  }
+}
 
-  .delete-button:hover {
+.delete-button:hover {
     border-color: red;
     background-color: red;
     color: #fff;
-  }
+}
+
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin: 0 10%;
+}
 
 .paw-profile-card-container {
     display: flex;
@@ -71,5 +79,23 @@ li {
     
     .paw-profile-card{
         width: 345px;
+    }
+
+    .buttons-container{
+        margin: 0 30%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .buttons-container{
+        margin: 0 35%;
+    }
+}
+
+@media screen and (min-width: 1750px) {
+
+    .buttons-container{
+        margin: 0 40%;
     }
 }
