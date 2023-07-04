@@ -36,7 +36,7 @@ li {
 }
 .paw-profile-card-hover {
     box-shadow: inset 0 0 0 0 #ff8400;
-    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: color .5s linear, box-shadow .5s linear;
     padding: 10px;
     border-radius: 5px;
 }

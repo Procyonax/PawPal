@@ -97,8 +97,13 @@
   margin: 5px 0;
 }
 
-.ratings-options{
-  text-align: center;
+.rating-options {
+  display: inline-block;
+  gap: 10px;
+}
+
+p {
+  cursor: pointer;
 }
 
 .submit-button {
