@@ -41,6 +41,7 @@ const PawPalContainer = () => {
   const [breedState, setBreedState] = useState([]);
   const [reversedArray, setReversedArray] = useState([]);
   const [dogFactsState, setDogFactsState] = useState([]);
+  // eslint-disable-next-line
   const [selectedBreed, setSelectedBreed] = useState(null);
   const [pawProfiles, setPawProfiles] = useState([]);
   // const [pawTrackers, setPawTrackers] = useState([]);
@@ -49,6 +50,12 @@ const PawPalContainer = () => {
     getBreedState();
     getDogFactsState();
     getPawProfiles();
+  }, []);
+
+  useEffect(() => {
+    const getReverseArray = function () {
+      reverseArray(nearestMatches);
+    };
     getReverseArray();
   }, [nearestMatches]);
 
@@ -75,18 +82,23 @@ const PawPalContainer = () => {
   };
 
   const handleUpdate = (pawProfile) => {
-    const request = new Request()
-    request.Patch("/api/profiles/" + pawProfile.id, pawProfile)
-    .then(() => {
-      window.location = "/pawprofiles/" + pawProfile.id
-    })
-  }
+    const request = new Request();
+    request.Patch("/api/profiles/" + pawProfile.id, pawProfile).then(() => {
+      window.location = "/pawprofiles/" + pawProfile.id;
+    });
+  };
 
-  const PawProfileEditWrapper =() =>{
-    const {id} = useParams()
-    let foundPawProfile = findPawProfileById(id)
-    return <PawProfileEditForm pawProfile={foundPawProfile} breeds={breedState} handleUpdate={handleUpdate} />
-  }
+  const PawProfileEditWrapper = () => {
+    const { id } = useParams();
+    let foundPawProfile = findPawProfileById(id);
+    return (
+      <PawProfileEditForm
+        pawProfile={foundPawProfile}
+        breeds={breedState}
+        handleUpdate={handleUpdate}
+      />
+    );
+  };
 
   const PawProfileDetailWrapper = () => {
     // extract the id from the url
@@ -117,23 +129,15 @@ const PawPalContainer = () => {
   };
 
   const getDogFactsState = function () {
+    console.log("get dogFactsState called");
     fetch("/api/dogfacts")
       .then((res) => res.json())
       .then((pawfacts) => setDogFactsState(pawfacts));
   };
 
   const updateState = (matches) => {
-    console.log("update state called");
-    console.log("matches", matches);
     setNearestMatches(matches);
   };
-
-  const getReverseArray = function () {
-    console.log("reversed array:", nearestMatches);
-    reverseArray(nearestMatches);
-  }
-
-  // function to reverse the array of matchBreed
 
   function reverseArray(dogArray) {
     let arraysort = [];
@@ -147,19 +151,10 @@ const PawPalContainer = () => {
     let newFormData = { ...formData };
     newFormData[key] = data;
     setFormData(newFormData);
-    // const { name, value } = e.target;
-    // setFormData((prevData) => ({
-    //   ...prevData,
-    //   [name]: value,
-    // }));
   };
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
     getMatch();
-    // console.log("nearest matches in handle submit:"+reversedArray)
-    // window.location.assign("/result");
-    // window.location.replace = "/result";
   };
 
   const onBreedSelect = (selected) => {
@@ -174,7 +169,8 @@ const PawPalContainer = () => {
     console.log("formData", formData);
     console.log("breedDB", breedDatabase);
     let closestMatches = [];
-    // let bestMatch = null;
+    // eslint-disable-next-line
+    let bestMatch = null;
     let highestScore = 0;
     // nearestMatches.length = 0;
 
@@ -269,14 +265,13 @@ const PawPalContainer = () => {
       // Update the best match if the current breed has a higher score
       if (score > highestScore) {
         highestScore = score;
-        // bestMatch = breed;
+        // eslint-disable-next-line
+        bestMatch = breed;
         closestMatches.push(breed);
       }
     }
-    console.log("nearest match in matchbreed" + closestMatches);
     updateState(closestMatches);
   }
-  // console.log("nearest matches after set state" + nearestMatches)
 
   // matchBreed(formData, breedState);
 
@@ -297,60 +292,61 @@ const PawPalContainer = () => {
 
   return (
     <div>
-        <Router>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Splash />} />
-            <Route
-              path="/survey"
-              element={
-                <Survey
-                  handleChange={handleChange}
-                  handleSubmit={handleSubmit}
-                  formData={formData}
-                />
-              }
-            />
-            <Route
-              path="/result"
-              element={<Result reversedArray={reversedArray} />}
-            />
-            <Route
-              path="/pawprofiles/:id"
-              element={<PawProfileDetailWrapper />}
-            />
-            {pawProfiles.length > 0 ? (
-              <Route
-                path="/pawprofiles"
-                element={<PawProfileList pawProfiles={pawProfiles} />}
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Splash />} />
+          <Route
+            path="/survey"
+            element={
+              <Survey
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                formData={formData}
               />
-            ) : null}
+            }
+          />
+          <Route
+            path="/result"
+            element={<Result reversedArray={reversedArray} />}
+          />
+          <Route
+            path="/pawprofiles/:id"
+            element={<PawProfileDetailWrapper />}
+          />
+          {pawProfiles.length > 0 ? (
             <Route
-              path="/pawprofiles/new"
-              element={
-                <PawProfileForm breeds={breedState} onCreate={handlePost} />
-              }
+              path="/pawprofiles"
+              element={<PawProfileList pawProfiles={pawProfiles} />}
             />
-            <Route
-              path="/pawprofiles/edit/:id"
-              element={<PawProfileEditWrapper />} />
+          ) : null}
+          <Route
+            path="/pawprofiles/new"
+            element={
+              <PawProfileForm breeds={breedState} onCreate={handlePost} />
+            }
+          />
+          <Route
+            path="/pawprofiles/edit/:id"
+            element={<PawProfileEditWrapper />}
+          />
 
-            <Route path="/resources" element={<Resources />} />
-            <Route
-              path="/atozlist"
-              element={
-                <AtoZList breeds={breedState} onBreedSelect={onBreedSelect} />
-              }
-            />
-            <Route path="/detailbreed/:id" element={<BreedDetailWrapper />} />
-          </Routes>
-        </Router>
-      
-      <footer className="footer">
+          <Route path="/resources" element={<Resources />} />
+          <Route
+            path="/atozlist"
+            element={
+              <AtoZList breeds={breedState} onBreedSelect={onBreedSelect} />
+            }
+          />
+          <Route path="/detailbreed/:id" element={<BreedDetailWrapper />} />
+        </Routes>
+
+        <footer className="footer">
           {dogFactsState.length > 0 ? (
             <Footer pawfacts={dogFactsState} />
           ) : null}
-      </footer>
+        </footer>
+      </Router>
     </div>
   );
 };

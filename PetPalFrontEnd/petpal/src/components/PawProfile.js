@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import "../App.css"
-import "./styles.css/PawProfile.css"
+import "../App.css";
+import "./styles.css/PawProfile.css";
 
 const PawProfile = ({ pawProfile, handleDelete }) => {
   if (!pawProfile) {
