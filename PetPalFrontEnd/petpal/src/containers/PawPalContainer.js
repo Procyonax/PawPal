@@ -44,7 +44,6 @@ const PawPalContainer = () => {
   // eslint-disable-next-line
   const [selectedBreed, setSelectedBreed] = useState(null);
   const [pawProfiles, setPawProfiles] = useState([]);
-  // const [pawTrackers, setPawTrackers] = useState([]);
 
   useEffect(() => {
     getBreedState();
@@ -129,7 +128,6 @@ const PawPalContainer = () => {
   };
 
   const getDogFactsState = function () {
-    console.log("get dogFactsState called");
     fetch("/api/dogfacts")
       .then((res) => res.json())
       .then((pawfacts) => setDogFactsState(pawfacts));
@@ -172,7 +170,6 @@ const PawPalContainer = () => {
     // eslint-disable-next-line
     let bestMatch = null;
     let highestScore = 0;
-    // nearestMatches.length = 0;
 
     for (const breed of breedDatabase) {
       let score = 0;
@@ -272,8 +269,6 @@ const PawPalContainer = () => {
     }
     updateState(closestMatches);
   }
-
-  // matchBreed(formData, breedState);
 
   const findBreedById = (idToFind) => {
     let found = null;

@@ -13,7 +13,8 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         <label>
           How trainable would you like your dog to be?
           <br />
-          <input className="slider"
+          <input
+            className="slider"
             type="range"
             name="trainability"
             value={formData.trainability}
@@ -25,11 +26,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </label>
         <datalist id="trainabilty-values">
           <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
           </div>
         </datalist>
         <div className="range-container">
@@ -38,7 +39,8 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </div>
         <br />
         <label>
-          Would you be open to owning a dog from a breed that has known potential health issues?  
+          Would you be open to owning a dog from a breed that has known
+          potential health issues?
           <br />
           <input
             type="range"
@@ -52,17 +54,17 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </label>
         <datalist id="health-values">
           <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
           </div>
-        </datalist>  
+        </datalist>
         <div className="range-container">
           <p>not open</p>
           <p>very open</p>
-        </div>      
+        </div>
         <br />
         <label>
           When it comes to exercise needs, how would you rate your preference
@@ -80,22 +82,27 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </label>
         <datalist id="exercise-values">
           <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
           </div>
-        </datalist>  
+        </datalist>
         <div className="range-container">
           <p>little</p>
           <p>lots</p>
-        </div>  
+        </div>
         <br />
         <label>
-          What size of dog would you  be comfortable with?
+          What size of dog would you be comfortable with?
           <br />
-          <select className="size-dropdown" name="size" value={formData.size} onChange={handleChange}>
+          <select
+            className="size-dropdown"
+            name="size"
+            value={formData.size}
+            onChange={handleChange}
+          >
             <option value="">Select size</option>
             <option value="Small">Small</option>
             <option value="Medium">Medium</option>
@@ -104,7 +111,7 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </select>
         </label>
         <br />
-        <br/>
+        <br />
         <label>
           How comfortable are you with a dog that drools?
           <br />
@@ -120,21 +127,20 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </label>
         <datalist id="drooling-values">
           <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
           </div>
-        </datalist>  
+        </datalist>
         <div className="range-container">
           <p>uncomfortable</p>
           <p>comfortable</p>
-        </div>  
+        </div>
         <br />
         <label>
-          How much grooming are you willing to undertake
-          for your new dog?
+          How much grooming are you willing to undertake for your new dog?
           <br />
           <input
             type="range"
@@ -148,18 +154,18 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </label>
         <datalist id="grooming-values">
           <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
           </div>
-        </datalist>  
+        </datalist>
         <div className="range-container">
           <p>little</p>
           <p>lots</p>
-        </div>         
-         <br />
+        </div>
+        <br />
         <label>
           How hypoallergenic would you need the dog to be?
           <br />
@@ -175,17 +181,17 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </label>
         <datalist id="hypoallergenic-values">
           <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
           </div>
-        </datalist>  
+        </datalist>
         <div className="range-container">
           <p>not</p>
           <p>very</p>
-        </div>          
+        </div>
         <br />
         <label>
           How much do you mind your dog barking?
@@ -200,18 +206,18 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             list="barking-values"
           />
           <datalist id="barking-values">
-          <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <div className="options-container">
+              <option value="1" label="1"></option>
+              <option value="2" label="2"></option>
+              <option value="3" label="3"></option>
+              <option value="4" label="4"></option>
+              <option value="5" label="5"></option>
+            </div>
+          </datalist>
+          <div className="range-container">
+            <p>little</p>
+            <p>lots</p>
           </div>
-        </datalist>
-        <div className="range-container">
-          <p>little</p>
-          <p>lots</p>
-        </div>
         </label>
         <br />
         <label>
@@ -225,21 +231,20 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             min={1}
             max={5}
             list="protective-values"
-            
           />
           <datalist id="protective-values">
-          <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <div className="options-container">
+              <option value="1" label="1"></option>
+              <option value="2" label="2"></option>
+              <option value="3" label="3"></option>
+              <option value="4" label="4"></option>
+              <option value="5" label="5"></option>
+            </div>
+          </datalist>
+          <div className="range-container">
+            <p>not at all</p>
+            <p>extremely</p>
           </div>
-        </datalist>
-        <div className="range-container">
-          <p>not at all</p>
-          <p>extremely</p>
-        </div>
         </label>
         <br />
         <label>
@@ -255,18 +260,18 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             list="sociability-values"
           />
           <datalist id="sociability-values">
-          <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <div className="options-container">
+              <option value="1" label="1"></option>
+              <option value="2" label="2"></option>
+              <option value="3" label="3"></option>
+              <option value="4" label="4"></option>
+              <option value="5" label="5"></option>
+            </div>
+          </datalist>
+          <div className="range-container">
+            <p>unnecessary</p>
+            <p>very necessary</p>
           </div>
-        </datalist>
-        <div className="range-container">
-          <p>unnecessary</p>
-          <p>very necessary</p>
-        </div>
         </label>
         <br />
         <label>
@@ -282,18 +287,18 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             list="friendliness-to-other-dogs-values"
           />
           <datalist id="friendliness-to-other-dogs-values">
-          <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <div className="options-container">
+              <option value="1" label="1"></option>
+              <option value="2" label="2"></option>
+              <option value="3" label="3"></option>
+              <option value="4" label="4"></option>
+              <option value="5" label="5"></option>
+            </div>
+          </datalist>
+          <div className="range-container">
+            <p>unnecessary</p>
+            <p>very necessary</p>
           </div>
-        </datalist>
-        <div className="range-container">
-        <p>unnecessary</p>
-        <p>very necessary</p>
-        </div>
         </label>
         <br />
         <label>
@@ -311,11 +316,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </label>
         <datalist id="child-friendly-values">
           <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
           </div>
         </datalist>
         <div className="range-container">
@@ -338,11 +343,11 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </label>
         <datalist id="independence-values">
           <div className="options-container">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
           </div>
         </datalist>
         <div className="range-container">
@@ -351,7 +356,9 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </div>
         <br />
         <Link to="/result">
-          <button className="submit-button" onClick={handlePost}>Submit</button>
+          <button className="submit-button" onClick={handlePost}>
+            Submit
+          </button>
         </Link>
       </form>
     </div>

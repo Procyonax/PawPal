@@ -14,13 +14,7 @@ const DogFact = ({ pawfacts }) => {
     setRandomFact(pawfacts[randomIndex].description);
   };
 
-  // console.log("test", randomFact);
-
-  return (
-    <div>
-      <p>{randomFact}</p>
-    </div>
-  );
+  return <div>{randomFact}</div>;
 };
 
 export default DogFact;
