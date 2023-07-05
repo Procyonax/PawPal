@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.dog-image-container{
+.dog-image-container {
   margin-bottom: 20px;
 }
 
@@ -30,7 +30,7 @@
   text-align: justify;
 }
 
-.dog-breed-container{
+.dog-breed-container {
   margin: 20px auto;
   box-shadow: #8c8c8c -1px 15px 30px -12px;
   border-radius: 5px;

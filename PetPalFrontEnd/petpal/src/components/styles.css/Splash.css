@@ -25,7 +25,8 @@ h3 {
   box-shadow: #8c8c8c -1px 15px 30px -12px;
 }
 
-.quiz-link, .a-z-link {
+.quiz-link,
+.a-z-link {
   background-color: #fff;
   padding: 0.7rem 2rem;
   font-weight: 700;
@@ -35,7 +36,8 @@ h3 {
   margin: 5px 0;
 }
 
-.quiz-link:hover, .a-z-link:hover {
+.quiz-link:hover,
+.a-z-link:hover {
   background-color: #000;
   color: #fff;
 }
@@ -56,7 +58,6 @@ h3 {
 }
 
 @media screen and (min-width: 1024px) {
-
   .splash-container {
     width: 1024px;
     margin: auto;
