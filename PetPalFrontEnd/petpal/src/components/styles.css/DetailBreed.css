@@ -6,16 +6,19 @@
 .dog-image-container{
   margin-bottom: 20px;
 }
+
 .dog-image-detail {
-  width: 70%;
-  border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  display: flex;
+  margin: auto;
+  width: 90%;
+  border-radius: 5px;
+  box-shadow: #8c8c8c -1px 60px 30px -12px;
 }
 
 .ratings-list {
-  list-style: none;
-  text-align: start;
-  padding-left: 8rem;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   font-family: Belanosima;
 }
 
@@ -27,8 +30,23 @@
   text-align: justify;
 }
 
-.fancy-border {
-  border: 50px solid #ff8400;
-  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E")
-    25;
+.dog-breed-container{
+  margin: 20px auto;
+  box-shadow: #8c8c8c -1px 15px 30px -12px;
+  border-radius: 5px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .dog-breed-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .detail-breed {
+    width: 345px;
+  }
 }

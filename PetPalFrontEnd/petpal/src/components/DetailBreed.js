@@ -7,6 +7,7 @@ import PawPrint from "../icons/pawprint.svg";
 const DetailBreed = ({ breed }) => {
   console.log(breed);
   return (
+     <div className="dog-breed-container">
     <div className="detail-breed">
       <div className="dog-image-container">
       <img
@@ -15,7 +16,6 @@ const DetailBreed = ({ breed }) => {
         alt="dog"
       />
       </div>
-      <div className="fancy-border">
         <h2 className="detail-breed-name">{breed.name}</h2>
         <p className="detail-description">{breed.description}</p>
         <h3>
