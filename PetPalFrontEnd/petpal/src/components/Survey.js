@@ -38,7 +38,7 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </div>
         <br />
         <label>
-          How concerned are you about potential health issues in your new dog?
+          Would you be open to owning a dog from a breed that has known potential health issues?  
           <br />
           <input
             type="range"
@@ -60,8 +60,8 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </div>
         </datalist>  
         <div className="range-container">
-          <p>concerned</p>
-          <p>unconcerned</p>
+          <p>not open</p>
+          <p>very open</p>
         </div>      
         <br />
         <label>
@@ -75,10 +75,10 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
             onChange={handleChange}
             min={1}
             max={5}
-            list="excercise-values"
+            list="exercise-values"
           />
         </label>
-        <datalist id="excercise-values">
+        <datalist id="exercise-values">
           <div className="options-container">
           <option value="1" label="1"></option>
           <option value="2" label="2"></option>
@@ -88,7 +88,7 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </div>
         </datalist>  
         <div className="range-container">
-          <p>small</p>
+          <p>little</p>
           <p>lots</p>
         </div>  
         <br />
@@ -156,7 +156,7 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </div>
         </datalist>  
         <div className="range-container">
-          <p>less</p>
+          <p>little</p>
           <p>lots</p>
         </div>         
          <br />
@@ -183,12 +183,12 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </div>
         </datalist>  
         <div className="range-container">
-          <p>very</p>
           <p>not</p>
+          <p>very</p>
         </div>          
         <br />
         <label>
-          Do you mind your dog barking?
+          How much do you mind your dog barking?
           <br />
           <input
             type="range"
@@ -209,8 +209,8 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </div>
         </datalist>
         <div className="range-container">
-          <p>yes</p>
-          <p>no</p>
+          <p>little</p>
+          <p>lots</p>
         </div>
         </label>
         <br />
@@ -243,7 +243,7 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
         </label>
         <br />
         <label>
-          How sociable would you like your dog to be with other humans?
+          How sociable do you need your dog to be?
           <br />
           <input
             type="range"
@@ -264,13 +264,13 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </div>
         </datalist>
         <div className="range-container">
-          <p>just with me</p>
-          <p>extremely</p>
+          <p>unnecessary</p>
+          <p>very necessary</p>
         </div>
         </label>
         <br />
         <label>
-          Do you need your dog to get on with other dogs?
+          How important is it that your dog gets on with other dogs?
           <br />
           <input
             type="range"
@@ -291,8 +291,8 @@ const Survey = ({ handleChange, handleSubmit, formData }) => {
           </div>
         </datalist>
         <div className="range-container">
-          <p>no</p>
-          <p>yes</p>
+        <p>unnecessary</p>
+        <p>very necessary</p>
         </div>
         </label>
         <br />
