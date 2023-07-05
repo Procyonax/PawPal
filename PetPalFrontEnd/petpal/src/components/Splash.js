@@ -19,6 +19,10 @@ const Splash = () => {
         <Link to="/survey">
           <button className="quiz-link">Take our quiz</button>
         </Link>
+        <h3>...or have a look yourself</h3>
+        <Link to="/atozlist">
+          <button className="a-z-link">Breed A-Z</button>
+        </Link>
       </div>
     </div>
   );
