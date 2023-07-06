@@ -27,7 +27,7 @@ const DetailBreed = ({ breed }) => {
             How likely I am to have health issues: <b>{breed.healthIssues}</b>
           </li>
           <li>
-            How much exerciseI need: <b>{breed.exerciseNeeded}</b>
+            How much exercise I need: <b>{breed.exerciseNeeded}</b>
           </li>
           <li>
             My size: <b>{breed.size}</b>
@@ -51,8 +51,7 @@ const DetailBreed = ({ breed }) => {
             How sociable I am: <b>{breed.sociability}</b>
           </li>
           <li>
-            How friendly I am with other dogs:{" "}
-            <b>{breed.friendlinessToOtherDogs}</b>
+            How friendly I am with other dogs: <b>{breed.friendlinessToOtherDogs}</b>
           </li>
           <li>
             How child friendly I am: <b>{breed.childFriendly}</b>
