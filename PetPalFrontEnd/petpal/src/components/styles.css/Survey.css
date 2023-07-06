@@ -13,12 +13,14 @@ option {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family: Belanosima;
 }
 
 input[type="range"] {
   -webkit-appearance: none;
   background-color: #ff8400;
   width: 90vw;
+  height: 15px;
   margin: 0;
   border-radius: 10px;
   border: 1px solid #000;
@@ -31,15 +33,17 @@ input[type="range"]:focus {
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
-  background: url("../../icons/pawprint.svg");
+  height: 25px;
+  width: 25px;
+  background: url("../../icons/pawprint.svg") no-repeat center;
+  cursor: pointer;
 }
 
 input[type="range"]::-moz-range-thumb {
-  height: 20px;
-  width: 20px;
-  background: url("../../icons/pawprint.svg");
+  height: 25px;
+  width: 25px;
+  background: url("../../icons/pawprint.svg") no-repeat center;
+  cursor: pointer;
 }
 
 .size-dropdown {

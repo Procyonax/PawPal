@@ -20,6 +20,8 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   font-family: Belanosima;
+  margin: 0;
+  padding: 0;
 }
 
 .detail-breed-name {
@@ -28,6 +30,8 @@
 
 .detail-description {
   text-align: justify;
+  width: 90%;
+  margin: auto;
 }
 
 .dog-breed-container {
@@ -44,6 +48,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    width: 345px;
   }
 
   .detail-breed {
